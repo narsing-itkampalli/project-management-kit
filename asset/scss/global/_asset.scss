@@ -1,0 +1,61 @@
+$font-map: (
+    default: #{'Inter', sans-serif},
+    heading: #{'Poppins', sans-serif}
+);
+
+// Public Sans
+
+/*
+    Jost
+    Montserrat
+    Sora
+    Outfit
+    Public Sans
+    Sora
+    Tangerine
+    Roboto
+    Mulish
+*/
+
+$color-map: (
+    theme: #556EE6,
+    link: #556EE6,
+    text: #2E363D,
+    hover: #bfcdff50,
+    hover-dark: #0000000c,
+    hover-danger: #fb989129,
+    // background: #f9f9fb,
+    background: #f1f1f1,
+    delete: #D11A2A,
+    hover-delete: rgb(251 152 145 / 16%),
+    error: #f94242,
+    logout: #d75147,
+    border: #E9EDF1,
+    // border: #e6e6e6,
+    success: #198754,
+    completed: #06bf00,
+    starred: #ffa200
+);
+
+// @each $key, $value in $color-map {
+//     #{$key}: $value;
+// }
+
+$asset-map: (
+    font: $font-map,
+    color: $color-map
+);
+
+@function asset($keys...) {
+    $map: $asset-map;
+
+    @each $key in $keys {
+        @if (map-has-key($map, $key)){
+            $map: map-get($map, $key);
+        }
+        @else {
+            @return unknown;
+        }
+    }
+    @return $map;
+}

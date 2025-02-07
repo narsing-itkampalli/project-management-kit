@@ -1,0 +1,95 @@
+$divider-color: #e9edf1;
+
+.user-context {
+    position: fixed;
+    top: 58px;
+    right: 20px;
+    z-index: 5;
+    width: 340px;
+    // box-shadow: 0 0 5px rgba(0,0,0,.368627451);
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 8px;
+    min-height: 300px;
+    overflow: hidden;
+    background-color: #e9edf1;
+    border: 6px solid transparent;
+    // background-color: #f0f3ff;
+    // display: none;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 58px - 10px - 12px);
+    }
+
+    &__header {
+        // border-bottom: 1px solid asset('color', 'border');
+        padding-top: 6px;
+        padding-bottom: 10px;
+        flex: none;
+
+        @import 'user-context/header-option-list';
+    }
+
+    &__body-and-footer-group {
+        // background-color: #fbfbfb;
+        background-color: white;
+        border-radius: 12px 12px 8px 8px;
+        padding-top: 8px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+
+        &-container {
+            max-height: 700px;
+            overflow: auto;
+            scrollbar-width: thin;
+        }
+    }
+
+    // &__header {
+    //     background-color: #6983ff;
+    //     color: white;
+    //     border-bottom-color: asset('color', 'theme');
+    //     border-top-left-radius: 8px;
+    //     border-top-right-radius: 8px;
+
+    //     &-option-list {
+    //         &-item {
+    //             color: white;
+    //         }
+    //     }
+    // }
+
+    // &__active-account-email {
+    //     color: #ffffffcc !important;
+    // }
+
+    @import 'user-context/active-account';
+
+    &__body {
+        padding-top: 5px;
+    }
+
+    @import 'user-context/active-workspace';
+    
+
+    &__option-list-section {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    @import 'user-context/option-list';
+    
+
+    &__footer {
+        border-top: 1px solid $divider-color;
+    }
+
+
+    @import 'user-context/toggler';
+    @import 'user-context/workspace-menu';
+    @import 'user-context/option-submenu';
+    @import 'user-context/switch-account-menu';
+}   

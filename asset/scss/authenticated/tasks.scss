@@ -1,0 +1,19 @@
+@import '../global/asset';
+@import '../global/functions';
+@import '../global/shared';
+
+.tasks {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - shared('topbar', 'height'));
+    }
+
+    @import 'tasks/header';
+    @import 'tasks/body';
+    @import 'tasks/footer';
+    @import 'tasks/context-menu';
+}
+
+@import 'tasks/view-task';

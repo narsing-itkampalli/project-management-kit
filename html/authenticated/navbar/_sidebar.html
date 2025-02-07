@@ -1,0 +1,367 @@
+<nav class="sidebar">
+    <div class="sidebar__container">
+        <div class="sidebar__resize" resize-width=".sidebar__container=>width&&.topbar__container=>left&&main=>marginLeft" resize-width-max="380" resize-width-min="230">
+            <div class="sidebar__resize-line"></div>
+        </div>
+        <div class="sidebar__header">
+            <div class="sidebar__header-left">
+                <a href="#">
+                    <div class="sidebar__header-logo">
+                        <img src="/asset/image/logo/small.png" alt="...">
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar__header-right">
+                <button class="sidebar__header-menu-toggle-button" onclick="devSupport.toggleAttr(document.documentElement, 'sidebar-size', 'compact')">
+                    <icon name="mdi-hamburger-menu"></icon>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar__body">
+            <div class="sidebar__body-container"  box-shadow-on-scroll="ondown(.sidebar__content-header) onup(.sidebar__content-footer)">
+                <div class="sidebar__body-content-header-body">
+                    <div class="sidebar__content-header" sticky-position="true" has-box-shadow="false">
+                        <div class="sidebar__content-switcher">
+                            <button type="button" class="sidebar__content-switcher-item" is-active="true">Menu</button>
+                            <button type="button" class="sidebar__content-switcher-item">Customize</button>
+                        </div>
+                    </div>
+                    <div class="sidebar__content-body">
+                        <div class="sidebar__content-group nav-menu-section">
+                            <div class="nav-menu" is-active="true">
+                                <div class="nav-menu__title"></div>
+                                <div class="nav-menu__items">
+                                    <div class="nav-menu__items-container">
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="icons8--home"></icon>
+                                                    </span>
+                                                   <span class="nav-menu__item-title">Home</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-menu" is-active="true">
+                                <div class="nav-menu__title" onclick="devSupport.toggleAttr(this.closest('.nav-menu'), 'is-active')">
+                                    <div class="nav-menu__title-left">
+                                        <button type="button" class="nav-menu__title-menu-toggle-icon">
+                                            <icon name="ic--sharp-arrow-drop-down"></icon>
+                                        </button>
+                                        <span class="nav-menu__title-text" single-line-text>Menu</span>
+                                    </div>
+                                    <!-- <div class="nav-menu__title-right">
+                                        <span class="nav-menu__title-badge">11</span>
+                                    </div> -->
+                                </div>
+                                <div class="nav-menu__items">
+                                    <div class="nav-menu__items-container">
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="carbon--task"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">My Tasks</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="eos-icons--project-outlined"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Projects</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="mdi--calendar-check-outline"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Calendar</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="mdi--timer-outline"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Time Tracker</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="mdi-star-outline"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Favorites</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="bx--bell"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Notifications</span>
+                                                </div>
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-badge">
+                                                        52
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="nav-menu__item nav-menu__item-submenu-toggle" is-active="true" onclick="devSupport.toggleAttr(this, 'is-active')">
+                                            <div class="nav-menu__item-content">
+                                                <span class="nav-menu__item-icon">
+                                                    <icon name="mdi-sale-outline"></icon>
+                                                </span>
+                                                <span class="nav-menu__item-title">Sales</span>
+                                            </div>
+                                            <div class="nav-menu__item-content">
+                                                <div class="nav-menu__item-submenu-toggle-status-icon">
+                                                    <icon name="gridicons-chevron-down"></icon>
+                                                </div>
+                                                <div class="nav-menu__item-submenu-toggle-status-icon--compact">
+                                                    <icon name="ri--arrow-drop-right-fill"></icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav-submenu">
+                                            <div class="nav-submenu__container">
+                                                <div class="nav-submenu__items">
+                                                    <a href="#" class="nav-submenu__item-link">
+                                                        <div class="nav-submenu__item">
+                                                            <div class="nav-submenu__item-content">
+                                                                <div class="nav-submenu__item-title">Invoice</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="nav-submenu__item-link">
+                                                        <div class="nav-submenu__item">
+                                                            <div class="nav-submenu__item-content">
+                                                                <div class="nav-submenu__item-title">Quotation</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="eos-icons-service-outlined"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">My Services</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="fluent--chat-multiple-24-regular"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Chats</span>
+                                                </div>
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-badge">
+                                                        52
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="nav-menu__item-link" href="#">
+                                            <div class="nav-menu__item">
+                                                <div class="nav-menu__item-content">
+                                                    <span class="nav-menu__item-icon">
+                                                        <icon name="mdi-folder-outline"></icon>
+                                                    </span>
+                                                    <span class="nav-menu__item-title">Storage</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar__content-group data-overview-section">
+                            <button type="button" class="data-overview-section__toggle">
+                                <span class="data-overview-section__toggle-icon">
+                                    <icon name="icon-park-outline--more-app"></icon>
+                                </span>
+                            </button>
+                            <div class="data-overview-section__container">
+                                <div class="data-overview-section__header">
+                                    <div class="data-overview__tab" hide-scrollbar>
+                                        <div class="data-overview__tab-item" push="?data-overview=project" set-attribute-if-url-has="data-overview?=project=>is-active::true" has-badge="false">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="bx-briefcase-alt-2"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=task" set-attribute-if-url-has="data-overview=task=>is-active::true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="tdesign-task"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=message" set-attribute-if-url-has="data-overview=message=>is-active::true" has-badge="true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="fluent--chat-multiple-24-regular"></icon>
+                                            </span>
+                                            <span class="data-overview__tab-item-badge">
+                                                9+
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=team" set-attribute-if-url-has="data-overview=team=>is-active::true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="ant-design-team-outlined"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=storage" set-attribute-if-url-has="data-overview=storage=>is-active::true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="mdi-folder-outline"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=favorite" set-attribute-if-url-has="data-overview=favorite=>is-active::true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="mdi-star-outline"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="data-overview__tab-item" push="?data-overview=notification" set-attribute-if-url-has="data-overview=notification=>is-active::true" has-badge="true">
+                                            <span class="data-overview__tab-item-icon">
+                                                <icon name="mdi-bell-outline"></icon>
+                                            </span>
+                                            <span class="data-overview__tab-item-badge">
+                                                9+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-overview-section__body">
+                                    <div class="data-overview__panel" is-active="true">
+                                        <div class="data-overview__panel-header">
+                                            <div class="data-overview__panel-toggle">
+                                                <route-group get-keys="data-overview" duplicate>
+                                                    <route get-values="?project">
+                                                        <div class="data-overview__panel-title">
+                                                            Active Projects
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="task">
+                                                        <div class="data-overview__panel-title">
+                                                            Pending Tasks
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="message">
+                                                        <div class="data-overview__panel-title">
+                                                            Recent Chats
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="team">
+                                                        <div class="data-overview__panel-title">
+                                                            Team
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="storage">
+                                                        <div class="data-overview__panel-title">
+                                                            Storage
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="favorite">
+                                                        <div class="data-overview__panel-title">
+                                                            My Favorites
+                                                        </div>
+                                                    </route>
+                                                    <route get-values="notification">
+                                                        <div class="data-overview__panel-title">
+                                                            Notifications
+                                                        </div>
+                                                    </route>
+                                                </route-group>
+                                                <div class="data-overview__panel-toggle-status">
+                                                    <div class="data-overview__panel-toggle-icon">
+                                                        <icon name="gridicons-chevron-down"></icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-overview__panel-body">
+                                            <div class="data-overview__panel-body-container">
+                                                <route-group get-keys="data-overview" name="Sidebar <icon name='mdi-chevron-right'></icon> <b>data overview</b>" icon="pajamas:overview">
+                                                    <route name="Projects" get-values="?project">
+                                                        <include path="data-overview/project-overview"></include>
+                                                    </route>
+                                                    <route name="Messages" get-values="message">
+                                                        <include path="data-overview/message-overview"></include>
+                                                    </route>
+                                                    <route name="Tasks" get-values="task">
+                                                        <div class="task-overview"></div>
+                                                    </route>
+                                                    <route name="Team" get-values="team">
+                                                        <div class="team-overview"></div>
+                                                    </route>
+                                                    <route name="Storage" get-values="storage">
+                                                        <div class="storage-overview"></div>
+                                                    </route>
+                                                    <route name="Favorites" get-values="favorite">
+                                                        <div class="favorite-overview"></div>
+                                                    </route>
+                                                    <route name="Notifications" get-values="notification">
+                                                        <div class="notification-overview"></div>
+                                                    </route>
+                                                </route-group>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__content-footer" sticky-position="false">
+                    <div class="nav-menu" is-active="true">
+                        <div class="nav-menu__title"></div>
+                        <div class="nav-menu__items">
+                            <div class="nav-menu__items-container">
+                                <a class="nav-menu__item-link" href="#">
+                                    <div class="nav-menu__item">
+                                        <div class="nav-menu__item-content">
+                                            <span class="nav-menu__item-icon">
+                                                <icon name="material-symbols-contract-outline"></icon>
+                                            </span>
+                                            <span class="nav-menu__item-title">Terms & conditions</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="nav-menu__item-link" href="#">
+                                    <div class="nav-menu__item">
+                                        <div class="nav-menu__item-content">
+                                            <span class="nav-menu__item-icon">
+                                                <icon name="mdi-help-circle-outline"></icon>
+                                            </span>
+                                            <span class="nav-menu__item-title">Help Center</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

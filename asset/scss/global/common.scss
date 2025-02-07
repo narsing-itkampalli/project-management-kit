@@ -1,0 +1,137 @@
+@use 'sass:math';
+@import './asset';
+@import './dev-support/dev-support';
+
+@import './font-family/font-family.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+html, input, textarea, button {
+    font-family: asset('font', 'default');
+    font-size: 15px;
+    font-weight: 400;
+    color: #2E363D;
+}
+
+body {
+    background-color: asset('color', 'background');
+    // max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, textarea, button {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: asset('font', 'heading')
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+[single-line-text] {
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    padding: 0!important;
+    position: relative;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 1;
+    height: 1em;
+    // line-height: #{math.div(14, 16)};
+    line-height: 1;
+    -webkit-line-clamp: 1;
+}
+
+[hide-scrollbar] {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+[custom-scrollbar]::-webkit-scrollbar {
+    height: 5px;
+    width: 5px
+}
+
+[custom-scrollbar*=small]::-webkit-scrollbar {
+    height: 4px;
+    width: 4px
+}
+
+[custom-scrollbar*=large]::-webkit-scrollbar {
+    height: 10px;
+    width: 10px
+}
+
+[custom-scrollbar*=l-width]::-webkit-scrollbar {
+    width: 8px
+}
+
+[custom-scrollbar*=l-height]::-webkit-scrollbar {
+    height: 8px
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb,
+[custom-scrollbar]::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 5px
+}
+
+[custom-scrollbar*=stick]::-webkit-scrollbar-track,
+[custom-scrollbar]:hover::-webkit-scrollbar-track {
+    background-color: #ddd
+}
+
+[custom-scrollbar*=stick]::-webkit-scrollbar-thumb,
+[custom-scrollbar]:hover::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb:hover {
+    background-color: #a1a1a1
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb:active {
+    background-color: #757575
+}
+
+$google-fonts-primary: 'Poppins:wght@200;300;400;500;600;700';
+$google-fonts-secondary: 'Inter:wght@100;200;300;400;500;600;700';
+
+@import url('https://fonts.googleapis.com/css2?&family=#{$google-fonts-primary}&family=#{$google-fonts-secondary}&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800&family=Public+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    @each $key, $value in $color-map {
+        --#{$key}: #{$value};
+    }
+}
+
+:root {
+    @each $key, $value in $font-map {
+        --#{$key}: #{$value};
+    }
+}

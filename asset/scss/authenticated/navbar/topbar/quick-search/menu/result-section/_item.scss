@@ -1,0 +1,19 @@
+&-item {
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+
+    @import 'item/file';
+    @import 'item/project';
+    @import 'item/task';
+    @import 'item/user';
+    @import 'item/action';
+    @import 'item/popular';
+    @import 'item/recent';
+
+    @import 'item-option-list';
+
+    &:not(:hover) &-option-list {
+        display: none;
+    }
+}

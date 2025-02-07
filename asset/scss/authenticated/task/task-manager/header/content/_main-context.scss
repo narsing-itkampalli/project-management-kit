@@ -1,0 +1,13 @@
+&-main-context-toggle {
+    width: $item-size;
+    height: $item-size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: asset('color', 'hover-dark');
+    }
+}

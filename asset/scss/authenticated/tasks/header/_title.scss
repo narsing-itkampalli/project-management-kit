@@ -1,0 +1,13 @@
+&-title {
+    font-size: to-rem(20);
+    font-family: asset('font', 'heading');
+    font-weight: 600;
+}
+
+&-title-link {
+    color: asset('color', 'text');
+
+    &:hover {
+        color: asset('color', 'link');
+    }
+}

@@ -1,0 +1,9 @@
+@import '../global/asset';
+@import '../global/functions';
+@import '../global/shared';
+
+.shared-library {
+    padding: 24px;
+}
+
+@import './video-player';

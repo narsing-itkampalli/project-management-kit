@@ -1,0 +1,58 @@
+<form method="post" class="auth-form">
+    <div class="auth-form__input-field-section">
+        <div class="auth-form__input-field-group">
+            <div class="auth-form__input-field">
+                <label class="auth-form__input-label">Firstname</label>
+                <div class="auth-form__input-wrapper" input-has-icon="true" input-has-error="true">
+                    <span class="auth-form__input-icon">
+                        <icon name="mdi-user-outline"></icon>
+                    </span>
+                    <input type="text" name="firstname" class="auth-form__input" placeholder="Firstname">
+                    <button type="button" class="auth-form__input-error-button">
+                        <icon name="mdi-exclamation"></icon>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-form__input-field" input-field-contains-no-icon>
+                <label class="auth-form__input-label">Lastname</label>
+                <div class="auth-form__input-wrapper">
+                    <input type="text" name="lastname" class="auth-form__input" placeholder="Lastname">
+                </div>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Email</label>
+            <div class="auth-form__input-wrapper" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="mdi-email-outline"></icon>
+                </span>
+                <input type="text" name="email" class="auth-form__input" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Password</label>
+            <div class="auth-form__input-wrapper" input-type="password" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="mdi-password-outline"></icon>
+                </span>
+                <input type="text" name="password" class="auth-form__input" placeholder="Enter your password">
+                <button type="button" class="auth-form__password-view-toggler-button">
+                    <icon name="mdi-eye-outline"></icon>
+                </button>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Confirm password</label>
+            <div class="auth-form__input-wrapper" input-type="password" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="mdi-lock-check-outline"></icon>
+                </span>
+                <input type="text" name="confirm_password" class="auth-form__input" placeholder="Re-enter your password">
+                <button type="button" class="auth-form__password-view-toggler-button">
+                    <icon name="mdi-eye-outline"></icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <include path="../submit-button" button-icon="" button-label="Signup" button-disabled="false" button-push-link="?step=otp"></include>
+</form>

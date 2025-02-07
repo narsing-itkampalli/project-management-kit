@@ -1,0 +1,81 @@
+<div class="request-leave">
+    <div class="request-leave__container">
+        <div class="request-leave__header">
+            <div class="request-leave__header-left">
+                <h2 class="request-leave__header-heading">Leave Request</h2>
+            </div>
+            <div class="request-leave__header-right">
+                <div class="request-leave__header-action-list">
+                    <button type="button" class="request-leave__header-action">
+                        <span class="request-leave__header-action-icon">
+                            <icon name="mdi--arrow-expand"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="request-leave__header-action" push="?request-leave">
+                        <span class="request-leave__header-action-icon">
+                            <icon name="mdi-close"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="request-leave__body">
+            <div class="request-leave-account-info">You have <span class="request-leave-account-info-highlight">16 leaves</span> in your account.</div>
+
+            <div class="request-leave__input-field">
+                <div class="request-leave__input-label">Leave type</div>
+                <div class="request-leave__input-wrapper">
+                    <div class="request-leave__input-select">
+                        <span class="request-leave__input-select-placeholder">Choose a type</span>
+                    </div>
+                    <div class="request-leave__input-select-indicator">
+                        <icon name="ri-arrow-down-s-fill"></icon>
+                    </div>
+                </div>
+            </div>
+            <div class="request-leave__input-field">
+                <div class="request-leave__input-label">Number of days</div>
+                <div class="request-leave__input-wrapper">
+                    <div class="request-leave__input-select">
+                        <span class="request-leave__input-select-placeholder">Select days</span>
+                    </div>
+                    <div class="request-leave__input-select-indicator">
+                        <icon name="ri-arrow-down-s-fill"></icon>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+                -> Leave Type (Select)
+                -> Number of days (select) + Custom number input
+                -> Date selector
+                    If select <=1 Show only Date selector
+                    If selected more than 1 day then Show from to date selector
+                -> Select "Full day, First half day, Second half day"
+                -> Reason description
+                -> attachments
+                -> Inform to
+             -->
+        </div>
+        <div class="request-leave__footer">
+            <div class="request-leave__footer-left">
+                <div class="request-leave__footer-action-list">
+                    <button type="button" class="request-leave__footer-action">
+                        <span class="request-leave__footer-action-icon">
+                            <icon name="uil--setting"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="request-leave__footer-right">
+                <div class="request-leave__footer-button-list">
+                    <button type="button" class="request-leave__footer-button request-leave__footer-button--cancel">
+                        <span class="request-leave__footer-button-text">Cancel</span>
+                    </button>
+                    <button type="button" class="request-leave__footer-button request-leave__footer-button--submit">
+                        <span class="request-leave__footer-button-text">Apply leave</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

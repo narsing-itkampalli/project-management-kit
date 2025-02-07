@@ -1,0 +1,196 @@
+<div class="tasks__header-filter-menu">
+    <div class="tasks__header-filter-menu-container">
+        <div class="tasks__header-filter-menu-header">
+            <div class="tasks__header-filter-menu-header-left">
+                <div class="tasks__header-filter-menu-title">Filters</div>
+            </div>
+            <div class="tasks__header-filter-menu-header-right">
+                <button type="button" class="tasks__header-filter-menu-close-button" push="$filter-menu">
+                    <span class="tasks__header-filter-menu-close-button-icon">
+                        <icon name="mdi-close"></icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="tasks__header-filter-menu-body">
+            <div class="tasks__header-filter-menu-optiongroup">
+                <div class="tasks__header-filter-menu-optiongroup-header">
+                    <div class="tasks__header-filter-menu-optiongroup-heading">Saved</div>
+                </div>
+                <div class="tasks__header-filter-menu-optiongroup-body">
+                    <div class="tasks__header-filter-menu-optiongroup-body-container">
+                        <div class="tasks__header-filter-menu-saved">
+                            <repeat value="5">
+                                <div class="tasks__header-filter-menu-saved-item">
+                                    <div class="tasks__header-filter-menu-saved-item-content">
+                                        <span class="tasks__header-filter-menu-saved-item-text">Bug Fixes</span>
+                                    </div>
+                                    <button type="button" class="tasks__header-filter-menu-saved-item-close-button">
+                                        <icon name="mdi-close"></icon>
+                                    </button>
+                                </div>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks__header-filter-menu-optiongroup" is-active="true" can-toggle>
+                <div class="tasks__header-filter-menu-optiongroup-header">
+                    <div class="tasks__header-filter-menu-optiongroup-heading">Quick filters</div>
+                    <div class="tasks__header-filter-menu-optiongroup-toggle">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </div>
+                </div>
+                <div class="tasks__header-filter-menu-optiongroup-body">
+                    <div class="tasks__header-filter-menu-optiongroup-body-container">
+                        <div class="tasks__header-filter-menu-quickfilter">
+                            <repeat value="1">
+                                <div class="tasks__header-filter-menu-quickfilter-item">
+                                    <div class="tasks__header-filter-menu-quickfilter-item-content">
+                                        <span class="tasks__header-filter-menu-quickfilter-item-icon">
+                                            <icon name="carbon--incomplete"></icon>
+                                        </span>
+                                        <span class="tasks__header-filter-menu-quickfilter-item-text">Incomplete tasks</span>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-quickfilter-item">
+                                    <div class="tasks__header-filter-menu-quickfilter-item-content">
+                                        <span class="tasks__header-filter-menu-quickfilter-item-icon">
+                                            <icon name="material-symbols--check-circle"></icon>
+                                        </span>
+                                        <span class="tasks__header-filter-menu-quickfilter-item-text">Completed tasks</span>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-quickfilter-item">
+                                    <div class="tasks__header-filter-menu-quickfilter-item-content">
+                                        <span class="tasks__header-filter-menu-quickfilter-item-icon">
+                                            <icon name="carbon--task"></icon>
+                                        </span>
+                                        <span class="tasks__header-filter-menu-quickfilter-item-text">Just my tasks</span>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-quickfilter-item">
+                                    <div class="tasks__header-filter-menu-quickfilter-item-content">
+                                        <span class="tasks__header-filter-menu-quickfilter-item-icon">
+                                            <icon name="mdi--calendar-check-outline"></icon>
+                                        </span>
+                                        <span class="tasks__header-filter-menu-quickfilter-item-text">Due this week</span>
+                                    </div>
+                                </div>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks__header-filter-menu-optiongroup">
+                <div class="tasks__header-filter-menu-optiongroup-header">
+                    <div class="tasks__header-filter-menu-optiongroup-heading">Filter options</div>
+                </div>
+                <div class="tasks__header-filter-menu-optiongroup-body">
+                    <div class="tasks__header-filter-menu-optiongroup-body-container">
+                        <div class="tasks__header-filter-menu-optionmenu">
+                            <div class="tasks__header-filter-menu-optionmenu-option">
+                                <div class="tasks__header-filter-menu-optionmenu-option-toggle">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-content">
+                                        <span class="tasks__header-filter-menu-optionmenu-option-toggle-text">Timeline</span>
+                                    </div>
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-status">
+                                        <icon name="gridicons-chevron-down"></icon>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-optionmenu-option-body">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-body-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tasks__header-filter-menu-optionmenu-option">
+                                <div class="tasks__header-filter-menu-optionmenu-option-toggle">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-content">
+                                        <span class="tasks__header-filter-menu-optionmenu-option-toggle-text">Status</span>
+                                    </div>
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-status">
+                                        <icon name="gridicons-chevron-down"></icon>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-optionmenu-option-body">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-body-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tasks__header-filter-menu-optionmenu-option">
+                                <div class="tasks__header-filter-menu-optionmenu-option-toggle">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-content">
+                                        <span class="tasks__header-filter-menu-optionmenu-option-toggle-text">Priority</span>
+                                    </div>
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-status">
+                                        <icon name="gridicons-chevron-down"></icon>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-optionmenu-option-body">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-body-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tasks__header-filter-menu-optionmenu-option">
+                                <div class="tasks__header-filter-menu-optionmenu-option-toggle">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-content">
+                                        <span class="tasks__header-filter-menu-optionmenu-option-toggle-text">Assignee</span>
+                                    </div>
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-status">
+                                        <icon name="gridicons-chevron-down"></icon>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-optionmenu-option-body">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-body-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tasks__header-filter-menu-optionmenu-option">
+                                <div class="tasks__header-filter-menu-optionmenu-option-toggle">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-content">
+                                        <span class="tasks__header-filter-menu-optionmenu-option-toggle-text">Label</span>
+                                    </div>
+                                    <div class="tasks__header-filter-menu-optionmenu-option-toggle-status">
+                                        <icon name="gridicons-chevron-down"></icon>
+                                    </div>
+                                </div>
+                                <div class="tasks__header-filter-menu-optionmenu-option-body">
+                                    <div class="tasks__header-filter-menu-optionmenu-option-body-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasks__header-filter-menu-footer">
+            <div class="tasks__header-filter-menu-footer-left">
+                <button type="button" class="tasks__header-filter-menu-save-button" has-toggle-icon>
+                    <div class="tasks__header-filter-menu-save-button-content">
+                        <span class="tasks__header-filter-menu-save-button-icon">
+                            <icon name="bx--save"></icon>
+                        </span>
+                        <span class="tasks__header-filter-menu-save-button-text">Save</span>
+                    </div>
+                    <div class="tasks__header-filter-menu-save-button-toggle">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </div>
+                </button>
+            </div>
+            <div class="tasks__header-filter-menu-footer-right">
+                <button type="button" class="tasks__header-filter-menu-clear-button">
+                    <!-- <span class="tasks__header-filter-menu-clear-button-icon">
+                        <icon name="mdi--filter-remove-outline"></icon>
+                    </span> -->
+                    <span class="tasks__header-filter-menu-clear-button-text">Clear all</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

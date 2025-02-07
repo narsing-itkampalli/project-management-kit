@@ -1,0 +1,32 @@
+/* ------------- Regular 400 ---------- */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(font_path("/Poppins/woff/Poppins-Regular.woff")) format("woff");
+}
+/* ------------- Medium 500 ---------- */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(font_path("/Poppins/woff/Poppins-Medium.woff")) format("woff");
+}
+/* ------------- Semi-bold 600 ---------- */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(font_path("/Poppins/woff/Poppins-SemiBold.woff")) format("woff");
+}
+/* ------------- Bold 700 ---------- */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(font_path("/Poppins/woff/Poppins-Bold.woff")) format("woff");
+}

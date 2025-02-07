@@ -1,0 +1,85 @@
+&-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    &-left {
+        display: flex;
+        gap: 12px;
+    }
+
+    &:hover {
+        background-color: asset('color', 'hover-dark');
+    }
+
+    &-icon {
+        width: 34px;
+        height: 34px;
+        position: relative;
+        
+        &-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    &-online-status {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        background-color: green;
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+
+    &-text {
+        &-primary {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        &-secondary {
+            margin-top: 8px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-name {
+        font-weight: 500;
+    }
+
+    &-email {
+        color: #929292;
+        font-size: to-rem(12);
+        font-weight: 300;
+        font-family: asset('font', 'heading');
+    }
+
+    &-tag {
+        // padding: 2px 4px;
+        // background-color: rgb(195, 225, 255);
+        color: asset('color', 'theme');
+        border-radius: 4px;
+        width: max-content;
+        font-size: to-rem(11);
+        font-family: asset('font', 'heading');
+    }
+}

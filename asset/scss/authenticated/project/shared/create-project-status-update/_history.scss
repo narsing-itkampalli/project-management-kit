@@ -1,0 +1,108 @@
+&__history {
+    padding: 16px 16px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: thin;
+
+    &-item {
+        position: relative;
+        display: flex;
+
+        &-gutter {
+            width: 16px;
+            height: 66px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        &-circle {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            flex: none;
+
+            &-icon {
+                font-size: to-rem(8);
+                display: flex;
+            }
+        }
+
+        &-gutter-line {
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: rgb(221, 221, 221);
+        }
+
+        // &-circle {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 8px;
+        //     bottom: 0;
+        //     width: 2px;
+        //     background-color: red;
+        // }
+
+
+        &-info {
+            padding-left: 16px;
+            padding-top: 2px;
+
+            &-title {
+                font-size: to-rem(14);
+                font-weight: 500;
+            }
+
+            &--secondary {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 8px;
+            }
+
+            &-owner {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                &-icon {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                &-name {
+                    font-size: to-rem(12);
+                }
+            }
+
+            &-time {
+                font-size: to-rem(12);
+                color: rgb(156, 156, 156);
+            }
+        }
+    }
+
+    &-item:last-child &-item-gutter-line {
+        visibility: hidden;
+    }
+
+    &-item + &-item {
+        margin-top: 4px;
+    }
+}

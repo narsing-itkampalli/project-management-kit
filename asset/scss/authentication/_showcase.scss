@@ -1,0 +1,39 @@
+.auth-showcase {
+    margin-top: 60px;
+    width: 640px;
+    // transform: translateX(-50%);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        // flex-direction: column;
+        // text-align: center;
+
+        &-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+            font-size: 24px;
+            background-color: #dfe4fb;
+            color: asset('color', 'theme');
+            border-radius: 50%;
+
+        }
+
+        &-text {
+            font-size: to-rem(15);
+            line-height: 1.5;
+        }
+    }
+}

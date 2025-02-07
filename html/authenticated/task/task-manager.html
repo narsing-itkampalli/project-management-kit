@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/navbar.css">
+    <link rel="stylesheet" href="/asset/css/task-manager.css">
+</head>
+<body>
+    <header>
+        <include path="../navbar"></include>
+    </header>
+    <main>
+        <section class="task-manager">
+            <div class="task-manager__container">
+                <include path="task-manager/header"></include>
+                <div class="task-manager__body">
+                    <div class="task-manager__body-container">
+                        <route-group name="Task views" get-keys="task-view">
+                            <route name="List" get-values="?list">
+                                <include path="task-manager/task-list-view"></include>
+                            </route>
+                            <route name="Board" get-values="board">
+                                <include path="task-manager/task-board-view"></include>
+                            </route>
+                            <route name="Detail" get-values="detail">
+                                <include path="task-manager/task-detail-view"></include>
+                            </route>
+                            <route name="Calendar" get-values="calendar">
+                                <include path="task-manager/task-calendar-view"></include>
+                            </route>
+                            <route name="Timeline" get-values="timeline">
+                                <include path="task-manager/task-timeline-view"></include>
+                            </route>
+                            <route name="Gantt" get-values="gantt">
+                                <include path="task-manager/task-gantt-view"></include>
+                            </route>
+                        </route-group>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>

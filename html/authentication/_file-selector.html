@@ -1,0 +1,120 @@
+<div class="auth-file-selector-section">
+    <div class="auth-file-selector" is-file-selected="{{is-file-selected}}">
+        <div class="auth-file-selector__selected">
+            <img src="/asset/image/placeholder/placeholder-img.png" alt="...">
+        </div>
+        <div class="auth-file-selector__placeholder">
+            <div class="auth-file-selector__placeholder-icon">
+                <icon name="icons8-upload"></icon>
+            </div>
+            <div class="auth-file-selector__placeholder-text">{{placeholder-text}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="auth-file-selector-uploaded-section" show-uploaded-section="{{show-uploaded-section}}">
+    <div class="auth-file-selector-uploaded-section__title">Resume/CV</div>
+    <div class="auth-file-selector-uploaded" show-add-button="false">
+        <div class="auth-file-selector-uploaded__content">
+            <div class="auth-file-selector-uploaded__file-icon">
+                <img src="/asset/image/file-icon/pdf.png" alt="...">
+            </div>
+            <div class="auth-file-selector-uploaded__file-info">
+                <div class="auth-file-selector-uploaded__title">Sparrow - CV - UI/UX Designer</div>
+                <div class="auth-file-selector-uploaded__additional">
+                    <span>120 Kb</span>
+                    <span>14 Feb, 2023 at 12:50 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="auth-file-selector-uploaded__actions">
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--delete">
+                <icon name="mdi-trash-can-outline"></icon>
+            </button>
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--add">
+                <icon name="mdi-plus"></icon>
+            </button>
+        </div>
+    </div>
+    <div class="auth-file-selector-uploaded">
+        <div class="auth-file-selector-uploaded__content">
+            <div class="auth-file-selector-uploaded__file-icon">
+                <img src="/asset/image/file-icon/pdf.png" alt="...">
+            </div>
+            <div class="auth-file-selector-uploaded__file-info">
+                <div class="auth-file-selector-uploaded__title">Sparrow - CV - UI/UX Designer</div>
+                <div class="auth-file-selector-uploaded__additional">
+                    <span>120 Kb</span>
+                    <span>14 Feb, 2023 at 12:50 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="auth-file-selector-uploaded__actions">
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--delete">
+                <icon name="mdi-trash-can-outline"></icon>
+            </button>
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--add">
+                <icon name="mdi-plus"></icon>
+            </button>
+        </div>
+    </div>
+    <div class="auth-file-selector-uploaded" is-in-progress="true">
+        <div class="auth-file-selector-uploaded__content">
+            <div class="auth-file-selector-uploaded__file-icon">
+                <div class="auth-file-selector-uploaded__progress-icon-area">
+                    <icon name="mdi-upload"></icon>
+                </div>
+            </div>
+            <div class="auth-file-selector-uploaded__file-info">
+                <div class="auth-file-selector-uploaded__title">Sparrow - CV - UI/UX Designer</div>
+                <div class="auth-file-selector-uploaded__additional">
+                    <span>Uploading... 80% of 7MB</span>
+                </div>
+            </div>
+        </div>
+        <div class="auth-file-selector-uploaded__actions">
+            <!-- <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--cancel">
+                <icon name="mdi-close"></icon>
+            </button> -->
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--cancel" has-label="true">
+                <span class="auth-file-selector-uploaded__action-icon">
+                    <icon name="mdi-close"></icon>
+                </span>
+                <div class="auth-file-selector-uploaded__action-label">Cancel</div>
+            </button>
+        </div>
+    </div>
+    <div class="auth-file-selector-uploaded" file-upload-error="true">
+        <div class="auth-file-selector-uploaded__content">
+            <div class="auth-file-selector-uploaded__file-icon">
+                <div class="auth-file-selector-uploaded__progress-icon-area">
+                    <icon name="mdi-upload"></icon>
+                </div>
+            </div>
+            <div class="auth-file-selector-uploaded__file-info">
+                <div class="auth-file-selector-uploaded__title">Sparrow - CV - UI/UX Designer</div>
+                <div class="auth-file-selector-uploaded__additional">
+                    <span>7MB</span>
+                    <span class="auth-file-selector-uploaded__error-message">File upload failed</span>
+                </div>
+            </div>
+        </div>
+        <div class="auth-file-selector-uploaded__actions">
+            <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--reupload" has-label="true">
+                <span class="auth-file-selector-uploaded__action-icon">
+                    <icon name="mdi-reload"></icon>
+                </span>
+                <div class="auth-file-selector-uploaded__action-label">Retry</div>
+            </button>
+            <!-- <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--delete" is-absolute-position="true">
+                <icon name="mdi-trash-can-outline"></icon>
+            </button> -->
+            <!-- <button type="button" class="auth-file-selector-uploaded__action auth-file-selector-uploaded__action--cancel" has-label="true">
+                <span class="auth-file-selector-uploaded__action-icon">
+                    <icon name="mdi-close"></icon>
+                </span>
+                <div class="auth-file-selector-uploaded__action-label">Cancel</div>
+            </button> -->
+        </div>
+    </div>
+</div>

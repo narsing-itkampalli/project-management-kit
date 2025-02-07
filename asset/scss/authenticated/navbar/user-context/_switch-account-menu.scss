@@ -1,0 +1,191 @@
+&__switch-account-menu {
+    &-header {
+        border-bottom: 1px solid asset('color', 'border');
+        height: 40px;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+            cursor: pointer;
+
+            span {
+                display: flex;
+            }
+
+            &:hover {
+                background-color: asset('color', 'hover-dark');
+            }
+        }
+
+        &-title {
+            font-family: asset('font', 'heading');
+            font-weight: 600;
+        }
+
+        @import 'option-submenu/search-form';
+    }
+
+    &-heading {
+        padding-left: 8px;
+        padding-right: 12px;
+        padding-bottom: 8px;
+        padding-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        height: 100%;
+
+        &-column {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+    }
+
+    &-body {
+        padding-top: 12px;
+        padding-bottom: 18px;
+    }
+
+    &-account-list {
+        padding-left: 6px;
+        padding-right: 6px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 10px;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+
+            // &:not(:last-child) {
+            //     border-bottom: 1px solid asset('color', 'border');
+            // }
+
+            &:hover {
+                background-color: asset('color', 'hover-dark');
+            }
+
+            &[is-active-acount] {
+                padding-right: calc(12px + 8px + 16px);
+            }
+            
+            &[is-active-acount]:not([is-active-acount=false]) {
+                cursor: inherit;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+
+            &-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                overflow: hidden;
+                flex: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            &-text {
+
+                &-username {
+                    font-weight: 500;
+                }
+
+                &-email {
+                    font-size: to-rem(14);
+                    margin-top: 6px;
+                    color: #757575;
+                }
+            }
+
+            &-is-active-indicator {
+                position: absolute;
+                top: 50%;
+                right: 12px;
+                transform: translateY(-50%);
+                font-size: 16px;
+                color: asset('color', 'success');
+            }
+        }
+    }
+
+    &-footer {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        // border-top: 1px solid asset('color', 'border');
+    }
+
+    &-action-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &-action-button {
+        width: 100%;
+        height: 36px;
+        // border: 1px solid #eee;
+        border: none;
+        border-radius: 35px;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        padding-left: 24px;
+        gap: 12px;
+        border: 1px solid asset('color', 'theme');
+        color: asset('color', 'theme');
+        background-color: asset('color', 'theme');
+        color: white;
+        font-size: to-rem(14);
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &[is-danger]:not([is-danger=false]) {
+            background-color: transparent;
+            color: asset('color', 'logout');
+            border: none;
+            border: 1px solid #d7514757;
+
+            &:hover {
+                background-color: asset('color', 'hover-danger');
+                opacity: 1;
+            }
+        }
+
+        &-icon {
+            display: flex;
+        }
+    }
+}

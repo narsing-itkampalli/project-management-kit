@@ -1,0 +1,65 @@
+&__active-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    height: 54px;
+    padding: 8px 12px;
+    // padding-right: 38px;
+    // border-radius: 35px;
+
+    // &:hover {
+    //     background-color: asset('color', 'hover-dark');
+    //     cursor: pointer;
+    // }
+
+    &-icon {
+        width: 34px;
+        height: 34px;
+        flex: none;
+        position: relative;
+
+        &-container {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+    }
+
+    @import 'user-current-status';
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-username {
+        font-size: to-rem(15);
+        font-weight: 600;
+    }
+
+    &-email {
+        font-size: to-rem(14);
+        font-weight: 400;
+        margin-top: 6px;
+        color: #757575;
+    }
+
+    &-switch-indicator-icon {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        font-size: to-rem(12);
+        color: #757575;
+    }
+}

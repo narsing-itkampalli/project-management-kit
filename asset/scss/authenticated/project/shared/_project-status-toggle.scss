@@ -1,0 +1,50 @@
+.project-status-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E6E6E6;
+    height: 26px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 35px;
+    background-color: transparent;
+    gap: 8px;
+
+    &:not(&--no-indicator) {
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &-color-circle {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            // background-color: asset('color', 'completed');
+            // color: white;
+            border: 1px solid transparent;
+
+            // &--with-icon {
+            //     border-width: 1px;
+            // }
+        }
+
+        &-label {
+            font-size: to-rem(12);
+            // font-weight: 500;
+        }
+    }
+
+    &__indicator {
+        display: flex;
+        font-size: 10px;
+        color: #a1a1a1;
+    }
+}

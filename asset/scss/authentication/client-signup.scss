@@ -1,0 +1,91 @@
+@import '../global/asset';
+@import '../global/functions';
+@import 'layout';
+@import 'logo';
+@import 'auth-panel';
+// @import 'back-button';
+// @import 'progress-indicator';
+
+.authentication--client-signup {
+    .auth-panel {
+        padding-top: 50px;
+
+        &[panel-name=step1] {
+            padding-top: 60px;
+        }
+    }
+}
+
+.auth-form {
+    @import 'input-field';
+    @import 'otp-input-field';
+
+    &--otp {
+        padding-top: 30px;
+    }
+    
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 38px;
+        
+        &>* {
+            flex: 1;
+        }
+
+        .auth-submit-button {
+            margin-top: 0;
+        }
+    }
+
+    &__skip-button {
+        display: flex;
+        width: 100%;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: transparent;
+        color: asset('color', 'theme');
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        transition: background-color 0.15s ease-out, border-color 0.2s ease-out;
+        line-height: 1.4;
+        border: 1px solid transparent;
+
+        &-icon {
+            display: flex
+        }
+    
+        &[aria-disabled=true] {
+            background-color: lighten($color: asset('color', 'theme'), $amount: 20%);
+        }
+    
+        &:not([aria-disabled=true]) {
+            cursor: pointer;
+    
+            &:hover {
+                background-color: lighten(asset('color', 'hover'), 8%);
+                border-color: lighten(asset('color', 'theme'), 20%);
+            }
+        }
+    }
+}
+
+@import 'client-signup/step-1';
+
+@import 'submit-button';
+
+@import 'oauth';
+@import 'user-action-message';
+@import 'terms-message';
+@import 'showcase';
+
+@import 'email-sent-alert';
+
+@import 'open-email';
+@import 'otp-sent-alert';
+
+@import 'file-selector';

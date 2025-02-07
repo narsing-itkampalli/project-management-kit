@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/login.css">
+</head>
+<body>
+    <section class="authentication authentication--login">
+        <div class="authentication__layouts">
+            <div class="authentication__layout authentication__layout--main">
+                <include path="logo"></include>
+                <div class="auth-panel">
+                    <div class="auth-panel__container">
+                        <div class="auth-panel__header">
+                            <include path="panel-header" heading="Welcome Back" description="Login to your account and let the journey continue."></include>
+                        </div>
+                        <div class="auth-panel__body">
+                            <include path="login/form"></include>
+                        </div>
+                        <div class="auth-panel__footer">
+                            <include path="oauth"></include>
+                            <include path="user-action-message" message="Don't have an account? Register now as our <a href='./talent-signup.html'>Talent</a> or <a href='./client-signup.html'>Client</a>!"></include>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="authentication__layout authentication__layout--promo">
+                 
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>
+</html>

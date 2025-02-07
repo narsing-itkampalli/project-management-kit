@@ -1,0 +1,272 @@
+<div class="tasks__list-view">
+    <div class="tasks__list-view-header">
+        <div class="tasks__list-view-row tasks__list-view-row--header">
+            <div class="tasks__list-view-row-container">
+                <div class="tasks__list-view-column tasks__list-view-column--main tasks__list-view-column--header-main tasks__list-view-column--header">
+                    <div class="tasks__list-view-column-container tasks__list-view-column-container--header">
+                        <span class="tasks__list-view-column-text">Task name</span>
+                        <button type="button" class="tasks__list-view-column-sort-button">
+                            <icon name="gridicons-chevron-down"></icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="tasks__list-view-optional-column-list">
+                    <div class="tasks__list-view-optional-column-list-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--header">
+                            Due date
+                            <button type="button" class="tasks__list-view-column-sort-button">
+                                <icon name="gridicons-chevron-down"></icon>
+                            </button>
+                        </div>
+                        <div class="tasks__list-view-column tasks__list-view-column--header">
+                            Collaborators
+                            <button type="button" class="tasks__list-view-column-sort-button">
+                                <icon name="gridicons-chevron-down"></icon>
+                            </button>
+                        </div>
+                        <div class="tasks__list-view-column tasks__list-view-column--header">
+                            Projects
+                            <button type="button" class="tasks__list-view-column-sort-button">
+                                <icon name="gridicons-chevron-down"></icon>
+                            </button>
+                        </div>
+                        <div class="tasks__list-view-column tasks__list-view-column--header">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tasks__list-view-body">
+        <div class="tasks__list-view-section" is-open="true">
+            <div class="tasks__list-view-section-header">
+                <div class="tasks__list-view-section-header-reorder">
+                    <button type="button" class="tasks__list-view-section-header-reorder-button">
+                        <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                    </button>
+                </div>
+                <div class="tasks__list-view-section-header-content">
+                    <button type="button" class="tasks__list-view-section-header-toggle">
+                        <icon name="material-symbols-arrow-right"></icon>
+                    </button>
+                    <div class="tasks__list-view-section-header-title">
+                        Recently Assigned
+                    </div>
+                    <div class="tasks__list-view-section-header-action-list">
+                        <button type="button" class="tasks__list-view-section-header-action-list-item">
+                            <icon name="bx--plus"></icon>
+                        </button>
+                        <button type="button" class="tasks__list-view-section-header-action-list-item">
+                            <icon name="mdi-dots-vertical"></icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks__list-view-section-menu">
+                <div class="tasks__list-view-row">
+                    <div class="tasks__list-view-row-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--main">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-reorder">
+                                    <button type="button" class="tasks__list-view-column-reorder-button">
+                                        <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                                    </button>
+                                </div>
+                                <div class="tasks__list-view-column-content">
+                                    <div class="tasks__list-view-column-content-left">
+                                        <button type="button" class="tasks__list-view-column-checkmark-button">
+                                            <icon name="grommet-icons-checkmark"></icon>
+                                        </button>
+                                        <div class="tasks__list-view-column-task-title">
+                                            <input type="text" class="tasks__list-view-column-task-title-input" value="New website development">
+                                        </div>
+                                    </div>
+                                    <div class="tasks__list-view-column-content-right">
+                                        <div class="tasks__list-view-column-task-action-list">
+                                            <button type="button" class="tasks__list-view-column-task-action-list-item">
+                                                <icon name="fluent--arrow-sort-20-regular"></icon>
+                                            </button>
+                                            <button type="button" class="tasks__list-view-column-task-action-list-item">
+                                                <icon name="material-symbols-light-chevron-right"></icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tasks__list-view-optional-column-list">
+                            <div class="tasks__list-view-optional-column-list-container">
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder tasks__list-view-column-date-placeholder">
+                                        <span class="tasks__list-view-column-date-placeholder-icon">
+                                            <icon name="mdi-calendar-outline"></icon>
+                                        </span>
+                                    </div>
+                                    <div class="tasks__list-view-column-date-value" style="display: none;">
+                                        <div class="tasks__list-view-column-date-value-content">
+                                            <span class="tasks__list-view-column-date-value-icon">
+                                                <icon name="mdi-calendar-outline"></icon>
+                                            </span>
+                                            <span class="tasks__list-view-column-date-value-text">12 Nov 2024</span>
+                                        </div>
+                                        <button class="tasks__list-view-column-date-value-clear-button">
+                                            <icon name="mdi-close"></icon>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder tasks__list-view-column-collab-placeholder">
+                                        <div class="tasks__list-view-column-collab-placeholder-left">
+                                            <span class="tasks__list-view-column-collab-placeholder-icon">
+                                                <icon name="mdi-user-outline"></icon>
+                                            </span>
+                                        </div>
+                                        <div class="tasks__list-view-column-collab-placeholder-right">
+                                            <button type="button" class="tasks__list-view-column-collab-placeholder-add-button">
+                                                <icon name="mdi-plus"></icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder tasks__list-view-column-project-placeholder">
+                                        <button type="button" class="tasks__list-view-column-project-placeholder-add-button">
+                                            <icon name="mdi-plus"></icon>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tasks__list-view-column tasks__list-view-column--last">
+                                    <div class="tasks__list-view-column-container">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks__list-view-row">
+                    <div class="tasks__list-view-row-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--main">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-reorder">
+                                    <button type="button" class="tasks__list-view-column-reorder-button">
+                                        <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                                    </button>
+                                </div>
+                                <div class="tasks__list-view-column-content">
+                                    <div class="tasks__list-view-column-content-left">
+                                        <button type="button" class="tasks__list-view-column-checkmark-button">
+                                            <icon name="grommet-icons-checkmark"></icon>
+                                        </button>
+                                        <div class="tasks__list-view-column-task-title">
+                                            <input type="text" class="tasks__list-view-column-task-title-input" value="New website development">
+                                        </div>
+                                    </div>
+                                    <div class="tasks__list-view-column-content-right">
+                                        <div class="tasks__list-view-column-task-action-list">
+                                            <button type="button" class="tasks__list-view-column-task-action-list-item">
+                                                <icon name="fluent--arrow-sort-20-regular"></icon>
+                                            </button>
+                                            <button type="button" class="tasks__list-view-column-task-action-list-item">
+                                                <icon name="material-symbols-light-chevron-right"></icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tasks__list-view-optional-column-list">
+                            <div class="tasks__list-view-optional-column-list-container">
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder"></div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks__list-view-row">
+                    <div class="tasks__list-view-row-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--main">
+                            <div class="tasks__list-view-column-container"></div>
+                            
+                        </div>
+                        <div class="tasks__list-view-optional-column-list">
+                            <div class="tasks__list-view-optional-column-list-container">
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder"></div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks__list-view-row">
+                    <div class="tasks__list-view-row-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--main">
+                            <div class="tasks__list-view-column-container"></div>
+                            
+                        </div>
+                        <div class="tasks__list-view-optional-column-list">
+                            <div class="tasks__list-view-optional-column-list-container">
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder"></div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks__list-view-row">
+                    <div class="tasks__list-view-row-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--main">
+                            <div class="tasks__list-view-column-container"></div>
+                            
+                        </div>
+                        <div class="tasks__list-view-optional-column-list">
+                            <div class="tasks__list-view-optional-column-list-container">
+                                <div class="tasks__list-view-column">
+                                    <div class="tasks__list-view-column-placeholder"></div>
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                                <div class="tasks__list-view-column">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

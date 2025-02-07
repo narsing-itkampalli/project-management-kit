@@ -1,0 +1,101 @@
+<nav class="top">
+    <div class="container">
+        <div class="left">
+            <div class="logo-section">
+                <a href="/" class="logo-link">
+                    <div class="logo">
+                        <img src="/image/logo/small.png" alt="...">
+                    </div>
+                </a>
+                <include>components/create-button.html</include>
+            </div>
+            <div class="create" data-open=".create-list-popup">
+                <button type="button" class="default">
+                    <span class="icon">
+                        <!-- http://icon-sets.iconify.design/mdi/plus/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/>
+                        </svg>
+                    </span>
+                    <span class="label">Create</span>
+                </button>
+                <div class="more">
+                    <span class="arrow-icon">
+                        <!-- https://icon-sets.iconify.design/mdi/chevron-down/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="quick-search">
+                <button class="close" title="Close" type="button">
+                    <!-- https://icon-sets.iconify.design/material-symbols/chevron-left/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6L14 18Z"/>
+                    </svg>
+                </button>
+                <div class="input-field">
+                    <span class="icon">
+                        <!-- https://icon-sets.iconify.design/bx/search-alt/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/>
+                            <path fill="currentColor" d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z"/>
+                        </svg>
+                    </span>
+                    <input type="text" name="q" placeholder="Search..." data-open=".search-menu">
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button type="button" class="search" title="Search">
+                    <span class="icon">
+                        <!-- http://icon-sets.iconify.design/bx/search/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z"/>
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" class="invite" title="Invite">
+                    <span class="icon">
+                        <!-- https://icon-sets.iconify.design/bxs/user-plus/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M4.5 8.552c0 1.995 1.505 3.5 3.5 3.5s3.5-1.505 3.5-3.5s-1.505-3.5-3.5-3.5s-3.5 1.505-3.5 3.5zM19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3zM4 19h10v-1c0-2.757-2.243-5-5-5H7c-2.757 0-5 2.243-5 5v1h2z"/>
+                        </svg>
+                    </span>
+                    <span class="label"></span>
+                </button>
+                <button type="button" class="notification" title="Notifications">
+                    <span class="icon">
+                        <!-- https://icon-sets.iconify.design/mdi/bell-outline/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10 21h4c0 1.1-.9 2-2 2s-2-.9-2-2m11-2v1H3v-1l2-2v-6c0-3.1 2-5.8 5-6.7V4c0-1.1.9-2 2-2s2 .9 2 2v.3c3 .9 5 3.6 5 6.7v6l2 2m-4-8c0-2.8-2.2-5-5-5s-5 2.2-5 5v7h10v-7Z"/>
+                        </svg>
+                        <span class="status">9</span>
+                    </span>
+                    <span class="label"></span>
+                </button>
+            </div>
+            <div class="user-context">
+                <div class="toggle" data-open=".user-context-menu">
+                    <div class="user-icon">
+                        <img src="/temp/user.jpg" alt="...">
+                    </div>
+                    <div class="text-content">
+                        <div class="label">
+                            <div class="name" fixed-line-text>Narsing itkampalli</div>
+                            <div class="role">Talent</div>
+                        </div>
+                        <span class="arrow-icon">
+                            <!-- https://icon-sets.iconify.design/mdi/chevron-down/ -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

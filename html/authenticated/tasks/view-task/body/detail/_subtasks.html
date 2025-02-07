@@ -1,0 +1,273 @@
+<div class="view-task__detail-tab-subtask">
+    <div class="view-task__detail-tab-subtask-header">
+        <div class="view-task__detail-tab-subtask-header-container">
+            <div class="view-task__detail-tab-subtask-header-left">
+                <div class="view-task__detail-tab-subtask-header-heading">
+                    <span class="view-task__detail-tab-subtask-header-heading-icon">
+                        <icon name="mdi--subtasks"></icon>
+                    </span>
+                    <span class="view-task__detail-tab-subtask-header-heading-text">Subtasks</span>
+                </div>
+                <div class="view-task__detail-tab-subtask-header-status">
+                    <div class="view-task__detail-tab-subtask-header-status-progress">
+                        <span class="view-task__detail-tab-subtask-header-status-progress-fill" style="width: calc((1/3) * 100%);"></span>
+                    </div>
+                    <div class="view-task__detail-tab-subtask-header-status-text">1/3</div>
+                </div>
+            </div>
+            <div class="view-task__detail-tab-subtask-header-right">
+                <!-- <button type="button" class="view-task__detail-tab-subtask-header-add" has-no-toggle>
+                    <div class="view-task__detail-tab-subtask-header-add-default">
+                        <span class="view-task__detail-tab-subtask-header-add-icon">
+                            <icon name="mdi-plus"></icon>
+                        </span>
+                        <span class="view-task__detail-tab-subtask-header-add-text">Add subtask</span>
+                    </div>
+                    <div class="view-task__detail-tab-subtask-header-add-toggle">
+                        <span class="view-task__detail-tab-subtask-header-add-toggle-icon">
+                            <icon name="chevron-down"></icon>
+                        </span>
+                    </div>
+                </button> -->
+                <div class="view-task__detail-tab-subtask-header-option-list">
+                    <div class="view-task__detail-tab-subtask-header-option-list-container">
+                        <div class="view-task__detail-tab-subtask-header-option-list-item">
+                            <div class="view-task__detail-tab-subtask-header-option-list-item-content">
+                                <span class="view-task__detail-tab-subtask-header-option-list-item-icon">
+                                    <icon name="lucide-filter"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-header-option-list-item-label">Filter</span>
+                            </div>
+                        </div>
+                        <div class="view-task__detail-tab-subtask-header-option-list-item">
+                            <div class="view-task__detail-tab-subtask-header-option-list-item-content">
+                                <span class="view-task__detail-tab-subtask-header-option-list-item-icon">
+                                    <icon name="mdi-sort"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-header-option-list-item-label">Sort</span>
+                            </div>
+                        </div>
+                        <div class="view-task__detail-tab-subtask-header-option-list-item" has-no-label="true">
+                            <div class="view-task__detail-tab-subtask-header-option-list-item-content">
+                                <span class="view-task__detail-tab-subtask-header-option-list-item-icon">
+                                    <icon name="carbon--search"></icon>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="view-task__detail-tab-subtask-header-view-option-list">
+                    <div class="view-task__detail-tab-subtask-header-view-option-list-container">
+                        <div class="view-task__detail-tab-subtask-header-view-option-list-item">
+                            <span class="view-task__detail-tab-subtask-header-view-option-list-item-icon">
+                                <icon name="mdi--view-sequential-outline"></icon>
+                            </span>
+                        </div>
+                        <div class="view-task__detail-tab-subtask-header-view-option-list-item">
+                            <span class="view-task__detail-tab-subtask-header-view-option-list-item-icon">
+                                <icon name="mdi--view-grid-outline"></icon>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 
+                    Filter
+                    Sort
+                    Search
+                    Views (List, board)
+                    Team
+                 -->
+            </div>
+        </div>
+    </div>
+    <div class="view-task__detail-tab-subtask-body">
+        <div class="view-task__detail-tab-subtask-list">
+            <div class="view-task__detail-tab-subtask-list-item" set-attribute-if-url-has="subtask-input-active=>is-active::input">
+                <div class="view-task__detail-tab-subtask-list-item-container">
+                    <button type="button" class="view-task__detail-tab-subtask-list-item-sort">
+                        <span class="view-task__detail-tab-subtask-list-item-sort-icon">
+                            <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                        </span>
+                    </button>
+                    <div class="view-task__detail-tab-subtask-list-item-left">
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-checkmark">
+                            <span class="view-task__detail-tab-subtask-list-item-checkmark-icon">
+                                <icon name="grommet-icons-checkmark"></icon>
+                            </span>
+                        </button>
+                        <div class="view-task__detail-tab-subtask-list-item-title">
+                            <input type="text" class="view-task__detail-tab-subtask-list-item-title-input" value="Subtask name goes here!" push="?subtask-input-active">
+                        </div>
+                        <div class="view-task__detail-tab-subtask-list-item-count-list">
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--subtasks"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3/10</span>
+                            </div>
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--comment-outline"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-task__detail-tab-subtask-list-item-right">
+                        <div class="view-task__detail-tab-subtask-list-item-more-info">
+                            <div class="view-task__detail-tab-subtask-list-item-date">
+                                <div class="view-task__detail-tab-subtask-list-item-date-placeholder">
+                                    <span class="view-task__detail-tab-subtask-list-item-date-placeholder-icon">
+                                        <icon name="mdi--calendar-check-outline"></icon>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="view-task__detail-tab-subtask-list-item-member-list">
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/1.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/2.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/3.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item view-task__detail-tab-subtask-list-item-member-list-item--more">3+</div>
+                            </div>
+                        </div>
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-action-button">
+                            <span class="view-task__detail-tab-subtask-list-item-action-button-icon">
+                                <icon name="mdi-dots-vertical"></icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-task__detail-tab-subtask-list-item">
+                <div class="view-task__detail-tab-subtask-list-item-container">
+                    <button type="button" class="view-task__detail-tab-subtask-list-item-sort">
+                        <span class="view-task__detail-tab-subtask-list-item-sort-icon">
+                            <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                        </span>
+                    </button>
+                    <div class="view-task__detail-tab-subtask-list-item-left">
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-checkmark">
+                            <span class="view-task__detail-tab-subtask-list-item-checkmark-icon">
+                                <icon name="grommet-icons-checkmark"></icon>
+                            </span>
+                        </button>
+                        <div class="view-task__detail-tab-subtask-list-item-title">
+                            <input type="text" class="view-task__detail-tab-subtask-list-item-title-input" value="Subtask name goes here!">
+                        </div>
+                        <div class="view-task__detail-tab-subtask-list-item-count-list">
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--subtasks"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3/10</span>
+                            </div>
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--comment-outline"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-task__detail-tab-subtask-list-item-right">
+                        <div class="view-task__detail-tab-subtask-list-item-more-info">
+                            <div class="view-task__detail-tab-subtask-list-item-date">
+                                <div class="view-task__detail-tab-subtask-list-item-date-value">
+                                    <span class="view-task__detail-tab-subtask-list-item-date-value-icon">
+                                        <icon name="mdi--calendar-check-outline"></icon>
+                                    </span>
+                                    <span class="view-task__detail-tab-subtask-list-item-date-value-text">02 Apr, 2024</span>
+                                </div>
+                            </div>
+                            <button type="button" class="view-task__detail-tab-subtask-list-item-add-member">
+                                <span class="view-task__detail-tab-subtask-list-item-add-member-icon">
+                                    <icon name="mdi-user-outline"></icon>
+                                </span>
+                            </button>
+                        </div>
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-action-button">
+                            <span class="view-task__detail-tab-subtask-list-item-action-button-icon">
+                                <icon name="mdi-dots-vertical"></icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-task__detail-tab-subtask-list-item">
+                <div class="view-task__detail-tab-subtask-list-item-container">
+                    <button type="button" class="view-task__detail-tab-subtask-list-item-sort">
+                        <span class="view-task__detail-tab-subtask-list-item-sort-icon">
+                            <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                        </span>
+                    </button>
+                    <div class="view-task__detail-tab-subtask-list-item-left">
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-checkmark">
+                            <span class="view-task__detail-tab-subtask-list-item-checkmark-icon">
+                                <icon name="grommet-icons-checkmark"></icon>
+                            </span>
+                        </button>
+                        <div class="view-task__detail-tab-subtask-list-item-title">
+                            <input type="text" class="view-task__detail-tab-subtask-list-item-title-input" value="Subtask name goes here!">
+                        </div>
+                        <div class="view-task__detail-tab-subtask-list-item-count-list">
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--subtasks"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3/10</span>
+                            </div>
+                            <div class="view-task__detail-tab-subtask-list-item-count-list-item">
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-icon">
+                                    <icon name="mdi--comment-outline"></icon>
+                                </span>
+                                <span class="view-task__detail-tab-subtask-list-item-count-list-item-text">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-task__detail-tab-subtask-list-item-right">
+                        <div class="view-task__detail-tab-subtask-list-item-more-info">
+                            <div class="view-task__detail-tab-subtask-list-item-date">
+                                <div class="view-task__detail-tab-subtask-list-item-date-value" is-danger>
+                                    <span class="view-task__detail-tab-subtask-list-item-date-value-icon">
+                                        <icon name="mdi--calendar-check-outline"></icon>
+                                    </span>
+                                    <span class="view-task__detail-tab-subtask-list-item-date-value-text">02 Apr, 2024</span>
+                                </div>
+                            </div>
+                            <div class="view-task__detail-tab-subtask-list-item-member-list">
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/1.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/2.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item">
+                                    <img src="/asset/temp/profile/3.jpg" alt="...">
+                                </div>
+                                <div class="view-task__detail-tab-subtask-list-item-member-list-item view-task__detail-tab-subtask-list-item-member-list-item--more">3+</div>
+                            </div>
+                        </div>
+                        <button type="button" class="view-task__detail-tab-subtask-list-item-action-button">
+                            <span class="view-task__detail-tab-subtask-list-item-action-button-icon">
+                                <icon name="mdi-dots-vertical"></icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-task__detail-tab-subtask-list-item-add">
+                <div class="view-task__detail-tab-subtask-list-item-add-container">
+                    <span class="view-task__detail-tab-subtask-list-item-add-icon">
+                        <icon name="mdi-plus"></icon>
+                    </span>
+                    <span class="view-task__detail-tab-subtask-list-item-add-text">Add subtask</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

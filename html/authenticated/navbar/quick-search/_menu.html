@@ -1,0 +1,61 @@
+<div class="quick-search__menu">
+    <div class="quick-search__menu-container">
+        <div class="quick-search__menu-body">
+            <route get="!search-history" duplicate>
+                <include path="menu/filter-section"></include>
+                <include path="menu/result-section"></include>
+            </route>
+            <route name="History" get="search-history">
+                <include path="history"></include>
+            </route>
+        </div>
+        <div class="quick-search__menu-footer">
+            <div class="quick-search__menu-column">
+                <div class="quick-search__menu-footer-action-list">
+                    <button type="button" class="quick-search__menu-footer-action">
+                        <span class="quick-search__menu-footer-action-icon">
+                            <icon name="uil--setting"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="quick-search__menu-column">
+                <div class="quick-search__menu-shortcut-list">
+                    <div class="quick-search__menu-shortcut">
+                        <div class="quick-search__menu-shortcut-key-group" has-multiple-icon>
+                            <div class="quick-search__menu-shortcut-key">
+                                <span class="quick-search__menu-shortcut-key-icon">
+                                    <icon name="mdi--arrow-top"></icon>
+                                </span>
+                            </div>
+                            <div class="quick-search__menu-shortcut-key">
+                                <span class="quick-search__menu-shortcut-key-icon">
+                                    <icon name="mdi--arrow-top" rotate="180"></icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="quick-search__menu-shortcut-title">To navigate</div>
+                    </div>
+                    <div class="quick-search__menu-shortcut">
+                        <div class="quick-search__menu-shortcut-key-group">
+                            <div class="quick-search__menu-shortcut-key">
+                                <span class="quick-search__menu-shortcut-key-icon">
+                                    <icon name="uil--enter"></icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="quick-search__menu-shortcut-title">To select</div>
+                    </div>
+                    <div class="quick-search__menu-shortcut">
+                        <div class="quick-search__menu-shortcut-key-group">
+                            <div class="quick-search__menu-shortcut-key">
+                                <span class="quick-search__menu-shortcut-key-text">esc</span>
+                            </div>
+                        </div>
+                        <div class="quick-search__menu-shortcut-title">To close</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

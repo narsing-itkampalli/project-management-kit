@@ -1,0 +1,56 @@
+[
+    {
+        "group": "Menu",
+        "items": [
+            {
+                "name": "Dashboard",
+                "url": "/html/authenticated/dashboard.html"
+            },
+            {
+                "name": "My Tasks",
+                "url": "/html/authenticated/tasks.html"
+            },
+            {
+                "name": "Task manager",
+                "url": "/html/authenticated/task/task-manager.html"
+            },
+            {
+                "name": "File Manager",
+                "url": "/html/authenticated/file-manager.html"
+            },
+            {
+                "name": "Communication",
+                "url": "/html/authenticated/communication.html"
+            },
+            {
+                "name": "Leave manager",
+                "url": "/html/authenticated/leave/manage-leave.html"
+            }
+        ]
+    },
+    {
+        "group": "Authentication",
+        "icon": {
+            "default": "mdi-shield-key-outline",
+            "active": "mdi-shield-key"
+        },
+        "items": [
+            {
+                "name": "Talent Signup",
+                "url": "/html/authentication/talent-signup.html"
+            },
+            {
+                "name": "Client Signup",
+                "url": "/html/authentication/client-signup.html"
+            },
+            {
+                "name": "Login",
+                "url": "/html/authentication/login.html"
+            },
+            {
+                "name": "Verify Email",
+                "url": "/html/authentication/verify-email.html"
+            }
+        ]
+    }
+]

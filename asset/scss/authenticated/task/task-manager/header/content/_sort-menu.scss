@@ -1,0 +1,123 @@
+&-sort-menu {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 320px;
+    height: 400px;
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.26);
+    background-color: white;
+    border-radius: 4px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &-header, &-footer {
+        display: flex;
+        justify-content: space-between;
+        height: 46px;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+        flex: none;
+    }
+
+    &-header {
+        border-bottom: 1px solid asset('color', 'border');
+    }
+
+    &-title {
+        font-size: to-rem(18);
+        font-weight: 500;
+        font-family: asset('font', 'heading');
+        letter-spacing: 0.4px;
+    }
+
+    &-close-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 12px;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: asset('color', 'hover-dark');
+        }
+
+        &-icon {
+            display: flex;
+        }
+    }
+
+    &-body {
+        flex: 1;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow: auto;
+    }
+
+    &-footer {
+        border-top: 1px solid asset('color', 'border');
+    }
+
+    &-clear-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        border-radius: 35px;
+        padding: 6px 12px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        height: 30px;
+        border: 1px solid #ddd;
+
+        &-icon {
+            font-size: 14px;
+            display: flex;
+        }
+
+        &-text {
+            font-size: to-rem(14);
+        }
+    }
+
+    &-optionmenu {
+        &-option {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 32px;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: asset('color', 'hover');
+            }
+            
+            &-icon {
+                font-size: 16px;
+                display: flex;
+                color: #838383;
+            }
+
+            &-text {
+                font-size: to-rem(14);
+            }
+        }
+    }
+}

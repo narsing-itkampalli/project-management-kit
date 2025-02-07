@@ -1,0 +1,25 @@
+&__header {
+    position: relative;
+
+    &-content {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &-heading {
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    &-description {
+        margin-top: 16px;
+        line-height: 1.4;
+        color: asset('color', 'text');
+
+        b, strong {
+            font-weight: 600;
+        }
+    }
+}

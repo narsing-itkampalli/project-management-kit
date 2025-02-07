@@ -1,0 +1,100 @@
+<div class="user-context__workspace-menu">
+    <div class="user-context__workspace-menu-container">
+        <div class="user-context__workspace-menu-header">
+            <route get="!search" duplicate>
+                <div class="user-context__workspace-menu-header-container">
+                    <div class="user-context__workspace-menu-header-column">
+                        <button type="button" class="user-context__workspace-menu-header-back-button" push="?workspace-menu">
+                            <span class="user-context__workspace-menu-header-back-button-icon">
+                                <icon name="carbon-chevron-left"></icon>
+                            </span>
+                        </button>
+                        <div class="user-context__workspace-menu-header-title">Workspace</div>
+                    </div>
+                    <div class="user-context__workspace-menu-header-column">
+                        <button type="button" class="user-context__workspace-menu-header-search-toggle-button" push="?search">
+                            <span class="user-context__workspace-menu-header-back-button-icon">
+                                <icon name="carbon--search"></icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </route>
+            <route get="search" name="Search workspace menu">
+                <include path="workspace-menu/search-form"></include>
+            </route>
+        </div>
+        <div class="user-context__workspace-menu-body">
+            <div class="user-context__workspace-menu-list">
+                <div class="user-context__workspace-menu-list-item" is-active="true">
+                    <div class="user-context__workspace-menu-list-item-column">
+                        <div class="user-context__workspace-menu-list-item-info">
+                            <div class="user-context__workspace-menu-list-item-icon">
+                                <div class="user-context__workspace-menu-list-item-icon-container">
+                                    <img src="/asset/temp/image/company-icon/f.png" alt="...">
+                                </div>
+                            </div>
+                            <div class="user-context__workspace-menu-list-item-text">
+                                <div class="user-context__workspace-menu-list-item-text--primary" single-line-text>
+                                    Flowspace.my
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="user-context__workspace-menu-list-item-active-indicator">
+                            <div class="user-context__workspace-menu-list-item-action-list-item-icon">
+                                <icon name="carbon--checkmark-outline"></icon>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="user-context__workspace-menu-list-item-column">
+                        <div class="user-context__workspace-menu-list-item-action-list">
+                            <button type="button" class="user-context__workspace-menu-list-item-action-list-item">
+                                <div class="user-context__workspace-menu-list-item-action-list-item-icon">
+                                    <icon name="fluent-settings-24-regular"></icon>
+                                </div>
+                            </button>
+                            <!-- <button type="button" class="user-context__workspace-menu-list-item-action-list-item user-context__workspace-menu-list-item-action-list-item--delete">
+                                <div class="user-context__workspace-menu-list-item-action-list-item-icon">
+                                    <icon name="mdi--trash-can-outline"></icon>
+                                </div>
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="user-context__workspace-menu-list-item">
+                    <div class="user-context__workspace-menu-list-item-column">
+                        <div class="user-context__workspace-menu-list-item-info">
+                            <div class="user-context__workspace-menu-list-item-icon">
+                                <div class="user-context__workspace-menu-list-item-icon-container">
+                                    <img src="/asset/temp/image/company-icon/c.png" alt="...">
+                                </div>
+                            </div>
+                            <div class="user-context__workspace-menu-list-item-text">
+                                <div class="user-context__workspace-menu-list-item-text--primary" single-line-text>
+                                    CoderAxis
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-context__workspace-menu-list-item-column">
+                        <div class="user-context__workspace-menu-list-item-action-list">
+                            <button type="button" class="user-context__workspace-menu-list-item-action-list-item">
+                                <div class="user-context__workspace-menu-list-item-action-list-item-icon">
+                                    <icon name="fluent-settings-24-regular"></icon>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-context__workspace-menu-action-list">
+                <button type="button" class="user-context__workspace-menu-action-list-item">
+                    <span class="user-context__workspace-menu-action-list-item-icon">
+                        <icon name="bx--plus"></icon>
+                    </span>
+                    <span class="user-context__workspace-menu-action-list-item-label">Add Workspace</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

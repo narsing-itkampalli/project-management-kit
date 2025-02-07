@@ -1,0 +1,49 @@
+&-created {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: $view-task-padding;
+    padding-right: $view-task-padding;
+
+    &-by {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-icon {
+            overflow: hidden;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-name {
+            font-weight: 500;
+            font-size: to-rem(14);
+        }
+    }
+
+    &-on {
+        font-size: to-rem(12);
+        position: relative;
+        padding-left: 12px;
+
+
+        &::before {
+            content: "•";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            left: 0;
+            color: #777777;
+        }
+    }
+}

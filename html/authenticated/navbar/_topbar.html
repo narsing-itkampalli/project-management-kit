@@ -1,0 +1,63 @@
+<nav class="topbar">
+    <div class="topbar__container">
+        <route get="quick-search" duplicate>
+            <div class="quick-search__fallback" push="?quick-search"></div>
+        </route>
+        <div class="topbar__left">
+            <div class="topbar__quick-create-toggler">
+                <button type="button" class="topbar__quick-create-toggler-last-saved">
+                    <span class="topbar__quick-create-toggler-last-saved-icon">
+                        <icon name="mdi-plus"></icon>
+                    </span>
+                    <span class="topbar__quick-create-toggler-last-saved-label">
+                        New Task
+                    </span>
+                </button>
+                <button type="button" class="topbar__quick-create-toggler-dropdown-button" push="$quick-create-context">
+                    <span class="topbar__quick-create-toggler-dropdown-button-icon">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="topbar__center">
+            <include path="quick-search"></include>
+        </div>
+        <div class="topbar__right">
+            <div class="topbar__quick-actions">
+                <div class="topbar__quick-action">
+                    <span class="topbar__quick-action-icon">
+                        <icon name="bx-user-plus"></icon>
+                    </span>
+                </div>
+                <div class="topbar__quick-action" action-has-badge="true" push="$notification-popup">
+                    <div class="topbar__quick-action-icon">
+                        <icon name="mdi-bell-outline"></icon>
+                    </div>
+                    <span class="topbar__quick-action-badge">9+</span>
+                </div>
+            </div>
+            <div class="user-context__toggler">
+                <div class="user-context__toggler-container" push="$user-context">
+                    <div class="user-context__toggler-icon">
+                        <div class="user-context__toggler-icon-container">
+                            <img src="/asset/temp/user.jpg" alt="...">
+                        </div>
+                        <div class="user-context__toggler-icon-user-current-status">
+                            <span class="user-context__toggler-icon-user-current-status-toggle-icon">
+                                <icon name="gridicons-chevron-down"></icon>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-context__toggler-text">
+                        <span class="user-context__toggler-text-username" single-line-text>Narsing Itkampalli</span>
+                        <span class="user-context__toggler-text-role" single-line-text>Talent</span>
+                    </div>
+                    <span class="user-context__toggler-indicator">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

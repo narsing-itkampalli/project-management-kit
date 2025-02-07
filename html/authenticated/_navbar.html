@@ -1,0 +1,20 @@
+<include path="navbar/topbar"></include>
+<include path="navbar/sidebar"></include>
+
+<route-group name="User Context" get="user-context">
+    <route id="user-context" name="User Context">
+        <include path="navbar/user-context"></include>
+    </route>
+</route-group>
+
+<route id="quick-create-context" get="quick-create-context" name="Quick Create Context">
+    <include path="navbar/quick-create-context"></include>
+</route>
+
+<route id="notification-popup" name="Notifications" get="notifications=true">
+    <include path="navbar/notification-popup"></include>
+</route>
+
+<route name="File Viewer" get="file-viewer">
+    <include path="file-viewer"></include>
+</route>

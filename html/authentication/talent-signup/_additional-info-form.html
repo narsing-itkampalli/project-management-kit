@@ -1,0 +1,65 @@
+<form method="post" class="auth-form auth-form--personal-info">
+    <div class="auth-form__input-field-section">
+        <include path="../file-selector" placeholder-text="Upload Resume/CV" is-file-selected="false"></include>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">About</label>
+            <div class="auth-form__input-wrapper" input-type="textarea">
+                <textarea type="text" name="about" class="auth-form__textarea" placeholder="Write about yourself..."></textarea>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Work experience</label>
+            <div class="auth-form__input-wrapper" input-type="textarea" input-has-error="true">
+                <textarea type="text" name="work_experience" class="auth-form__textarea" placeholder="Write about your work experience..."></textarea>
+                <button type="button" class="auth-form__input-error-button">
+                    <icon name="mdi-exclamation"></icon>
+                </button>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">LinkedIn</label>
+            <div class="auth-form__input-wrapper" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="mdi-linkedin"></icon>
+                </span>
+                <input type="text" name="linkedin" class="auth-form__input" placeholder="LinkedIn">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Behance</label>
+            <div class="auth-form__input-wrapper" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="wpf-behance"></icon>
+                </span>
+                <input type="text" name="behance" class="auth-form__input" placeholder="Behance">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Dribbble</label>
+            <div class="auth-form__input-wrapper" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="teenyicons-dribbble-solid"></icon>
+                </span>
+                <input type="text" name="dribbble" class="auth-form__input" placeholder="Dribbble">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Personal website</label>
+            <div class="auth-form__input-wrapper" input-has-icon="true">
+                <span class="auth-form__input-icon">
+                    <icon name="mdi-web"></icon>
+                </span>
+                <input type="text" name="website" class="auth-form__input" placeholder="Personal website">
+            </div>
+        </div>
+    </div>
+    <div class="auth-form__buttons">
+        <button type="button" class="auth-form__skip-button">
+            <div class="auth-form__skip-button-label">Skip for now</div>
+            <div class="auth-form__skip-button-icon">
+                <icon name="mdi-chevron-right"></icon>
+            </div>
+        </button>
+        <include path="../submit-button" button-icon="" button-label="Complete" button-disabled="false" button-push-link="{{ submit-button-push-link }}"></include>
+    </div>
+</form>

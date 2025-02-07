@@ -1,0 +1,425 @@
+/*
+    Jost
+    Montserrat
+    Sora
+    Outfit
+    Public Sans
+    Sora
+    Tangerine
+    Roboto
+    Mulish
+*/
+@import url("https://fonts.googleapis.com/css2?&family=Poppins:wght@200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800&family=Public+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+component, if-url, include-attribute, [hidden] {
+  display: none;
+}
+
+.dev-support__route-list {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.79);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  padding-bottom: 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.231372549);
+  min-width: 240px;
+  overflow: hidden;
+  animation: dev-support-route-list-animation 0.2s ease-in-out;
+  max-height: 350px;
+  overflow: auto;
+  z-index: 100000;
+  min-height: 240px;
+}
+.dev-support__route-list-header {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px 4px 16px;
+  justify-content: space-between;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.dev-support__route-list-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.dev-support__route-list-title-icon {
+  background-color: rgba(173, 188, 255, 0.3607843137);
+  color: #556EE6;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dev-support__route-list-close {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+  font-size: 12px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dev-support__route-list-empty {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+.dev-support__route-list-body {
+  padding-top: 12px;
+}
+.dev-support__route-list ul {
+  list-style: none;
+}
+.dev-support__route-list ul li a {
+  color: #556EE6;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.15s ease-in-out;
+  padding-left: 16px;
+  padding-right: 8px;
+  font-size: 14px;
+}
+.dev-support__route-list-group-toggle {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  cursor: pointer;
+  gap: 16px;
+}
+.dev-support__route-list-group-toggle-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dev-support__route-list-group-toggle-name-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+.dev-support__route-list-group-toggle-name-label {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  padding: 0 !important;
+  position: relative;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  height: 1.2em;
+  line-height: 1.2;
+  -webkit-line-clamp: 1;
+  height: 1.2em;
+  line-height: 1.2;
+}
+.dev-support__route-list-group-toggle-name-label svg {
+  font-size: 12px;
+  color: #9f9f9f;
+}
+.dev-support__route-list-group-toggle-status {
+  font-size: 12px;
+  display: flex;
+  transition: transform 0.15s ease-in-out;
+}
+.dev-support__route-list-group[is-active=true] .dev-support__route-list-group-toggle-name-label {
+  font-weight: 500;
+}
+.dev-support__route-list-group[is-active=true] .dev-support__route-list-group-toggle-status {
+  transform: rotate(180deg);
+}
+.dev-support__route-list-group-menu {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.15s ease-in-out;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.dev-support__route-list-group[is-active=true] .dev-support__route-list-group-menu {
+  height: -moz-max-content;
+  height: max-content;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 10px;
+}
+.dev-support__route-list-group ul {
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+.dev-support__route-list-group ul li {
+  border-radius: 35px;
+}
+.dev-support__route-list-group ul li a {
+  padding-right: 0px;
+  height: 28px;
+  padding-left: 22px;
+}
+.dev-support__route-list ul + ul, ul + .dev-support__route-list-group, .dev-support__route-list-group + .dev-support__route-list-group, .dev-support__route-list-group + ul {
+  margin-top: 8px;
+}
+.dev-support__route-list-group:last-child .dev-support__route-list-group-menu {
+  border-bottom: none;
+}
+.dev-support__route-list:not([data-moving=true]) .dev-support__route-list-close:hover, .dev-support__route-list:not([data-moving=true]) ul li:hover {
+  background-color: rgba(179, 194, 247, 0.4862745098);
+}
+.dev-support__route-list:not([data-moving=true]) .dev-support__route-list-close:active, .dev-support__route-list:not([data-moving=true]) ul li:active {
+  background-color: rgba(152, 173, 247, 0.6117647059);
+}
+.dev-support__route-list[data-moving=true] .dev-support__route-list-close, .dev-support__route-list[data-moving=true] ul li a {
+  cursor: default;
+}
+
+@keyframes dev-support-route-list-animation {
+  0% {
+    transform: translateX(calc(-100% - 10px));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/* ------------- Thin 100 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Thin.ttf) format("truetype");
+}
+/* ------------- Light 300 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Light.ttf) format("truetype");
+}
+/* ------------- Regular 400 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Regular.ttf) format("truetype");
+}
+/* ------------- Semibold 500 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Semibold.ttf) format("truetype");
+}
+/* ------------- Bold 700 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Bold.ttf) format("truetype");
+}
+/* ------------- Black 900 ---------- */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/asset/font/Lato/Lato-Black.ttf) format("truetype");
+}
+/* ------------- Regular 400 ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/asset/font/Poppins/woff/Poppins-Regular.woff) format("woff");
+}
+/* ------------- Medium 500 ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/asset/font/Poppins/woff/Poppins-Medium.woff) format("woff");
+}
+/* ------------- Semi-bold 600 ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/asset/font/Poppins/woff/Poppins-SemiBold.woff) format("woff");
+}
+/* ------------- Bold 700 ---------- */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/asset/font/Poppins/woff/Poppins-Bold.woff) format("woff");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+html, input, textarea, button {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #2E363D;
+}
+
+body {
+  background-color: #f1f1f1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input, textarea, button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Poppins, sans-serif;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+[single-line-text] {
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  padding: 0 !important;
+  position: relative;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  height: 1em;
+  line-height: 1;
+  -webkit-line-clamp: 1;
+}
+
+[hide-scrollbar] {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+[hide-scrollbar]::-webkit-scrollbar {
+  display: none;
+}
+
+[custom-scrollbar]::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+[custom-scrollbar*=small]::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+[custom-scrollbar*=large]::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+[custom-scrollbar*=l-width]::-webkit-scrollbar {
+  width: 8px;
+}
+
+[custom-scrollbar*=l-height]::-webkit-scrollbar {
+  height: 8px;
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb,
+[custom-scrollbar]::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+[custom-scrollbar*=stick]::-webkit-scrollbar-track,
+[custom-scrollbar]:hover::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+[custom-scrollbar*=stick]::-webkit-scrollbar-thumb,
+[custom-scrollbar]:hover::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3;
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb:hover {
+  background-color: #a1a1a1;
+}
+
+[custom-scrollbar]::-webkit-scrollbar-thumb:active {
+  background-color: #757575;
+}
+
+:root {
+  --theme: #556EE6;
+  --link: #556EE6;
+  --text: #2E363D;
+  --hover: rgba(191, 205, 255, 0.3137254902);
+  --hover-dark: rgba(0, 0, 0, 0.0470588235);
+  --hover-danger: rgba(251, 152, 145, 0.1607843137);
+  --background: #f1f1f1;
+  --delete: #D11A2A;
+  --hover-delete: rgba(251, 152, 145, 0.16);
+  --error: #f94242;
+  --logout: #d75147;
+  --border: #E9EDF1;
+  --success: #198754;
+  --completed: #06bf00;
+  --starred: #ffa200;
+}
+
+:root {
+  --default: Inter, sans-serif;
+  --heading: Poppins, sans-serif;
+}/*# sourceMappingURL=common.css.map */

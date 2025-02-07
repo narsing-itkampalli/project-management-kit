@@ -1,0 +1,141 @@
+<form method="post" class="auth-form auth-form--personal-info">
+    <div class="auth-form__input-field-section">
+        <include path="../file-selector" placeholder-text="Profile Picture" is-file-selected="true" show-uploaded-section="false"></include>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Country</label>
+            <div class="auth-form__input-wrapper" input-type="select" input-has-icon="true" input-has-error="true">
+                <span class="auth-form__input-icon">
+                    <img src="/asset/image/flag/india.png" alt="...">
+                </span>
+                <input type="text" name="country" class="auth-form__input" placeholder="Select your country" disabled value="India">
+                <span class="auth-form__select-input-indicator-icon">
+                    <icon name="gridicons-chevron-down"></icon>
+                </span>
+                <button type="button" class="auth-form__input-error-button">
+                    <icon name="mdi-exclamation"></icon>
+                </button>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Identification / Passport Number</label>
+            <div class="auth-form__input-wrapper">
+                <input type="text" name="id_number" class="auth-form__input" placeholder="Identification / Passport Number">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Contact Number</label>
+            <div class="auth-form__input-group" is-mobile-number="true">
+                <div class="auth-form__input-wrapper auth-form__input-wrapper--mobile-prefix">
+                    <span class="auth-form__input-icon">
+                        <img src="/asset/image/flag/india.png" alt="...">
+                    </span>
+                    <input type="text" name="contact_number_prefix" class="auth-form__input" placeholder="+91" disabled>
+                    <span class="auth-form__select-input-indicator-icon">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </span>
+                </div>
+                <div class="auth-form__input-wrapper auth-form__input-wrapper--mobile-number">
+                    <input type="text" name="contact_number" class="auth-form__input" placeholder="Contact Number">
+                </div>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">WhatsApp Number</label>
+            <div class="auth-form__input-group" is-mobile-number="true">
+                <div class="auth-form__input-wrapper auth-form__input-wrapper--mobile-prefix">
+                    <span class="auth-form__input-icon">
+                        <img src="/asset/image/flag/india.png" alt="...">
+                    </span>
+                    <input type="text" name="whatsapp_number_prefix" class="auth-form__input" placeholder="+91" disabled>
+                    <span class="auth-form__select-input-indicator-icon">
+                        <icon name="gridicons-chevron-down"></icon>
+                    </span>
+                </div>
+                <div class="auth-form__input-wrapper auth-form__input-wrapper--mobile-number">
+                    <input type="text" name="whatsapp_number" class="auth-form__input" placeholder="WhatsApp Number">
+                </div>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Skype ID (optional)</label>
+            <div class="auth-form__input-wrapper">
+                <input type="text" name="skype_id" class="auth-form__input" placeholder="Skype ID">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Availability</label>
+            <div class="auth-form__input-wrapper" input-type="select">
+                <input type="text" name="availability" class="auth-form__input" placeholder="Availability" disabled>
+                <span class="auth-form__select-input-indicator-icon">
+                    <icon name="gridicons-chevron-down"></icon>
+                </span>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Skills</label>
+            <div class="auth-form__input-wrapper" input-type="select--multiple" input-has-error="true">
+                <div class="auth-form__custom-input">
+                    <div class="auth-form__selected-option">
+                        <div class="auth-form__selected-option-text">PHP</div>
+                        <div class="auth-form__selected-option-remove-button">
+                            <icon name="mdi-close"></icon>
+                        </div>
+                    </div>
+                    <div class="auth-form__selected-option">
+                        <div class="auth-form__selected-option-text">C Programming</div>
+                        <div class="auth-form__selected-option-remove-button">
+                            <icon name="mdi-close"></icon>
+                        </div>
+                    </div>
+                    <div class="auth-form__selected-option">
+                        <div class="auth-form__selected-option-text">Javascript</div>
+                        <div class="auth-form__selected-option-remove-button">
+                            <icon name="mdi-close"></icon>
+                        </div>
+                    </div>
+                    <div class="auth-form__selected-option">
+                        <div class="auth-form__selected-option-text">Python</div>
+                        <div class="auth-form__selected-option-remove-button">
+                            <icon name="mdi-close"></icon>
+                        </div>
+                    </div>
+                    <div class="auth-form__selected-option">
+                        <div class="auth-form__selected-option-text">Adobe Flash</div>
+                        <div class="auth-form__selected-option-remove-button">
+                            <icon name="mdi-close"></icon>
+                        </div>
+                    </div>
+                    <input type="text" name="skills" class="auth-form__custom-input-typing-area" placeholder="">
+                </div>
+                <button type="button" class="auth-form__input-error-button">
+                    <icon name="mdi-exclamation"></icon>
+                </button>
+                <span class="auth-form__select-input-indicator-icon">
+                    <icon name="gridicons-chevron-down"></icon>
+                </span>
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Current company</label>
+            <div class="auth-form__input-wrapper">
+                <input type="text" name="current_company" class="auth-form__input" placeholder="Current company (if applicable)">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">Job role</label>
+            <div class="auth-form__input-wrapper">
+                <input type="text" name="current_company" class="auth-form__input" placeholder="Job role (if applicable)">
+            </div>
+        </div>
+        <div class="auth-form__input-field">
+            <label class="auth-form__input-label">What's the main reason you want to be part of us?</label>
+            <div class="auth-form__input-wrapper" input-type="select">
+                <input type="text" name="skills" class="auth-form__input" placeholder="Please select an option" disabled>
+                <span class="auth-form__select-input-indicator-icon">
+                    <icon name="gridicons-chevron-down"></icon>
+                </span>
+            </div>
+        </div>
+    </div>
+    <include path="../submit-button" button-icon="" button-label="Next" button-disabled="false" button-push-link="?step=4"></include>
+</form>

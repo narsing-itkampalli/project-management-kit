@@ -1,0 +1,95 @@
+&__chat-view {
+    height: 100%;
+
+    &-container {
+        height: 100%;
+        display: flex;
+    }
+
+    &-sidebar {
+        width: 320px;
+        height: 100%;
+        background-color: white;
+        border-right: 1px solid asset('color', 'border');
+        flex: none;
+    }
+
+    &-task-list {
+        &-item {
+            padding-left: calc(16px + 18px);
+            padding-right: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            cursor: pointer;
+            position: relative;
+
+            &-container {
+                position: relative;
+            }
+
+            &-status-icon {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: black;
+                position: absolute;
+                left: -18px;
+                top: 9px;
+            }
+
+            &-title {
+                font-weight: 500;
+            }
+
+            &:hover {
+                background-color: asset('color', 'hover-dark');
+            }
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+            }
+
+            &-row + &-row {
+                margin-top: 6px;
+            }
+
+            &-column {
+                display: flex;
+                gap: 8px;
+            }
+
+            &-context-toggle {
+                width: 26px;
+                height: 26px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: asset('color', 'hover-dark');
+                }
+            }
+
+            @import 'date';
+            @import 'priority';
+
+            &-priority {
+                padding: 2px 6px;
+            }
+        }
+    }
+
+    &-body {
+        flex: 1;
+        background-color: white;
+    }
+}

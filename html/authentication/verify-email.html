@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/asset/css/login.css">
+</head>
+<body>
+    <section class="authentication authentication--verify-email">
+        <div class="authentication__layouts" has-single-layout="true">
+            <div class="authentication__layout authentication__layout--main">
+                <include path="logo"></include>
+                <div class="auth-form">
+                    <div class="auth-form__header">
+                        <include path="form-header" heading="Welcome Back" description="Login to your account and let the journey continue."></include>
+                    </div>
+                    <div class="auth-form__body">
+                        <include path="login/form"></include>
+                    </div>
+                    <div class="auth-form__footer">
+                        <include path="oauth"></include>
+                        <include path="login/signup-message"></include>
+                    </div>
+                </div>
+            </div>
+            <div class="authentication__layout authentication__layout--promo">
+                 
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>
+</html>

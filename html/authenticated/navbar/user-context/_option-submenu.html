@@ -1,0 +1,227 @@
+<div class="user-context__option-submenu">
+    <div class="user-context__option-submenu-container">
+        <div class="user-context__option-submenu-header">
+            <route get="!search" duplicate>
+                <div class="user-context__option-submenu-heading">
+                    <div class="user-context__option-submenu-heading-column">
+                        <route name="Appearance" get="appearance">
+                            <button type="button" class="user-context__option-submenu-header-back-button" push="?option-submenu&appearance">
+                                <icon name="carbon-chevron-left"></icon>
+                            </button>
+                            <div class="user-context__option-submenu-header-title">Appearance</div>
+                        </route>
+                        <route name="Language" get="language">
+                            <button type="button" class="user-context__option-submenu-header-back-button" push="?option-submenu&language">
+                                <icon name="carbon-chevron-left"></icon>
+                            </button>
+                            <div class="user-context__option-submenu-header-title">Choose your language</div>
+                        </route>
+                        <route name="Location" get="location">
+                            <button type="button" class="user-context__option-submenu-header-back-button" push="?option-submenu&location">
+                                <icon name="carbon-chevron-left"></icon>
+                            </button>
+                            <div class="user-context__option-submenu-header-title">Choose your location</div>
+                        </route>
+                        <route name="Currency" get="currency">
+                            <button type="button" class="user-context__option-submenu-header-back-button" push="?option-submenu&currency">
+                                <icon name="carbon-chevron-left"></icon>
+                            </button>
+                            <div class="user-context__option-submenu-header-title">Currency</div>
+                        </route>
+                    </div>
+                    <route name="Language" get="!appearance" duplicate>
+                        <div class="user-context__option-submenu-heading-column">
+                            <button type="button" class="user-context__option-submenu-header-search-toggle-button" push="?search">
+                                <span class="user-context__option-submenu-header-back-button-icon">
+                                    <icon name="carbon--search"></icon>
+                                </span>
+                            </button>
+                        </div>
+                    </route>
+                </div>
+            </route>
+            <route get="search">
+                <include path="option-submenu/search-form"></include>
+            </route>
+        </div>
+        <div class="user-context__option-submenu-body">
+                <route get="appearance" duplicate>
+                    <div class="user-context__option-submenu-list">
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    <icon name="icons8-checkmark"></icon>
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Use device theme</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Dark theme</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Light theme</div>    
+                            </div>
+                        </div>
+                    </div>
+                </route>
+                <route get="language" duplicate>
+                    <div class="user-context__option-submenu-list">
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    <icon name="icons8-checkmark"></icon>
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Afrikaans</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Azərbaycan</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Bahasa Indonesia</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Bahasa Malaysia</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Bosanski</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Català</div>    
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Čeština</div>    
+                            </div>
+                        </div>
+                    </div>
+                </route>
+                <route get="location" duplicate>
+                    <div class="user-context__option-submenu-list">
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    <icon name="icons8-checkmark"></icon>
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Algeria</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-icon">
+                                    <img src="/asset/image/flag/algeria.svg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Argentina</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-icon">
+                                    <img src="/asset/image/flag/ar.svg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Australia</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-icon">
+                                    <img src="/asset/image/flag/au.svg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Austria</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-icon">
+                                    <img src="/asset/image/flag/at.svg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label">Azerbaijan</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-icon">
+                                    <img src="/asset/image/flag/az.svg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </route>
+                <route get="currency" duplicate>
+                    <div class="user-context__option-submenu-list" load-array="currency" array-sort="name">
+                        <div class="user-context__option-submenu-list-item">
+                            <div class="user-context__option-submenu-list-item-column user-context__option-submenu-list-item-column--left">
+                                <div class="user-context__option-submenu-list-item-checkmark">
+                                    <match-index value="0">
+                                        <icon name="icons8-checkmark"></icon>
+                                    </match-index>
+                                </div>
+                                <div class="user-context__option-submenu-list-item-label" single-line-text>{{code}}</div>    
+                            </div>
+                            <div class="user-context__option-submenu-list-item-column">
+                                <div class="user-context__option-submenu-list-item-secondary-text">
+                                    {{symbol}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </route>
+            </div>
+        </div>
+    </div>
+</div>

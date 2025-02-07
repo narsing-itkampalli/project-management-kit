@@ -1,0 +1,42 @@
+&-option-list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &-item {
+        height: $item-size;
+        padding: 0 12px;
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 35px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: asset('color', 'hover-dark');
+        }
+
+        &-content {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        &-icon {
+            display: flex;
+        }
+
+        &-label {
+            font-size: to-rem(14);
+            // font-weight: 500;
+            // display: none;
+        }
+
+        &--round {
+            width: $item-size;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+    }
+}

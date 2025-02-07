@@ -1,0 +1,43 @@
+.email-sent-alert {
+    text-align: center;
+
+    &__message {
+        &-text {
+            line-height: 1.4;
+        }
+
+        &-icon {
+            width: 250px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    &__resend {
+        color: #707070;
+        margin-top: 24px;
+
+        &-button {
+            color: asset('color', 'theme');
+            cursor: pointer;
+            font-weight: 500;
+            background-color: transparent;
+            border: none;
+
+            &[aria-disabled=true] {
+                color: lighten($color: asset('color', 'theme'), $amount: 10%);
+                cursor: default;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,182 @@
+<div class="tasks__list-view">
+    <div class="tasks__list-view-header">
+        <div class="tasks__list-view-row tasks__list-view-row--header">
+            <div class="tasks__list-view-row-container">
+                <div class="tasks__list-view-row-column-list tasks__list-view-row-column-list--primary">
+                    <div class="tasks__list-view-row-column-list-container">
+                        <div class="tasks__list-view-column tasks__list-view-column--first">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-text">Task name</div>
+                                <button type="button" class="tasks__list-view-column-sort-button">
+                                    <icon name="gridicons-chevron-down"></icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks__list-view-row-column-list tasks__list-view-row-column-list--secondary">
+                    <div class="tasks__list-view-row-column-list-container">
+                        <div class="tasks__list-view-column">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-text">Due date</div>
+                                <button type="button" class="tasks__list-view-column-sort-button">
+                                    <icon name="gridicons-chevron-down"></icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tasks__list-view-column">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-text">Collaborators</div>
+                                <button type="button" class="tasks__list-view-column-sort-button">
+                                    <icon name="gridicons-chevron-down"></icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tasks__list-view-column">
+                            <div class="tasks__list-view-column-container">
+                                <div class="tasks__list-view-column-text">Projects</div>
+                                <button type="button" class="tasks__list-view-column-sort-button">
+                                    <icon name="gridicons-chevron-down"></icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tasks__list-view-column tasks__list-view-column--last" has-content="false">
+                            <div class="tasks__list-view-column-container">
+                                <button type="button" class="tasks__list-view-column-add-column-button">
+                                    <icon name="mdi-plus"></icon>
+                                </button>
+                                <!-- Empty column -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tasks__list-view-body">
+        <div class="tasks__list-view-task-section" is-open>
+            <div class="tasks__list-view-task-section-header">
+                <div class="tasks__list-view-task-section-header-container">
+                    <button type="button" class="tasks__list-view-task-section-header-reorder-button">
+                        <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                    </button>
+                    <div class="tasks__list-view-task-section-header-content">
+                        <button type="button" class="tasks__list-view-task-section-header-toggle">
+                            <icon name="material-symbols-arrow-right"></icon>
+                        </button>
+                        <div class="tasks__list-view-task-section-header-title">
+                            Recently Assigned
+                        </div>
+                        <div class="tasks__list-view-task-section-header-action-list">
+                            <button type="button" class="tasks__list-view-task-section-header-action-list-item">
+                                <icon name="bx--plus"></icon>
+                            </button>
+                            <button type="button" class="tasks__list-view-task-section-header-action-list-item">
+                                <icon name="mdi-dots-vertical"></icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks__list-view-task-section-body">
+                <div class="tasks__list-view-task-section-body-container">
+                    <repeat value="5">
+                        <div class="tasks__list-view-row">
+                            <div class="tasks__list-view-row-container">
+                                <div class="tasks__list-view-row-column-list tasks__list-view-row-column-list--primary">
+                                    <div class="tasks__list-view-row-column-list-container">
+                                        <div class="tasks__list-view-column tasks__list-view-column--first">
+                                            <div class="tasks__list-view-column-container">
+                                                <button type="button" class="tasks__list-view-column-reorder-button">
+                                                    <icon name="fluent--re-order-dots-vertical-24-regular"></icon>
+                                                </button>
+                                                <div class="tasks__list-view-column-title-section">
+                                                    <div class="tasks__list-view-column-title-section-left">
+                                                        <button type="button" class="tasks__list-view-column-title-section-checkmark-button">
+                                                            <icon name="grommet-icons-checkmark"></icon>
+                                                        </button>
+                                                        <div class="tasks__list-view-column-title-section-task-title">
+                                                            <input type="text" class="tasks__list-view-column-title-section-task-title-input" value="New website development">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tasks__list-view-column-title-section-right">
+                                                        <div class="tasks__list-view-column-title-section-task-action-list">
+                                                            <button type="button" class="tasks__list-view-column-title-section-task-action-list-item">
+                                                                <icon name="fluent--arrow-sort-20-regular"></icon>
+                                                            </button>
+                                                            <button type="button" class="tasks__list-view-column-title-section-task-action-list-item">
+                                                                <icon name="material-symbols-light-chevron-right"></icon>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tasks__list-view-row-column-list tasks__list-view-row-column-list--secondary">
+                                    <div class="tasks__list-view-row-column-list-container">
+                                        <div class="tasks__list-view-column">
+                                            <div class="tasks__list-view-column-container">
+                                                <div class="tasks__list-view-column-placeholder tasks__list-view-column-date-placeholder" style="display: none;">
+                                                    <span class="tasks__list-view-column-date-placeholder-icon">
+                                                        <icon name="mdi-calendar-outline"></icon>
+                                                    </span>
+                                                </div>
+                                                <div class="tasks__list-view-column-date-value">
+                                                    <div class="tasks__list-view-column-date-value-content">
+                                                        <!-- <span class="tasks__list-view-column-date-value-icon">
+                                                            <icon name="mdi-calendar-outline"></icon>
+                                                        </span> -->
+                                                        <span class="tasks__list-view-column-date-value-text">12 Nov 2024</span>
+                                                    </div>
+                                                    <button class="tasks__list-view-column-date-value-clear-button">
+                                                        <icon name="material-symbols-light--close"></icon>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tasks__list-view-column">
+                                            <div class="tasks__list-view-column-container">
+                                                <div class="tasks__list-view-column-placeholder tasks__list-view-column-collab-placeholder">
+                                                    <div class="tasks__list-view-column-collab-placeholder-left">
+                                                        <span class="tasks__list-view-column-collab-placeholder-icon">
+                                                            <icon name="mdi-user-outline"></icon>
+                                                        </span>
+                                                    </div>
+                                                    <div class="tasks__list-view-column-collab-placeholder-right">
+                                                        <button type="button" class="tasks__list-view-column-collab-placeholder-add-button">
+                                                            <icon name="mdi-plus"></icon>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tasks__list-view-column">
+                                            <div class="tasks__list-view-column-container">
+                                                <div class="tasks__list-view-column-placeholder tasks__list-view-column-project-placeholder">
+                                                    <!-- <button type="button" class="tasks__list-view-column-project-placeholder-add-button">
+                                                        <icon name="mdi-plus"></icon>
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tasks__list-view-column tasks__list-view-column--last" has-content="false">
+                                            <div class="tasks__list-view-column-container">
+                                                <!-- Empty column -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </repeat>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tasks__list-view-footer">
+
+    </div>
+</div>

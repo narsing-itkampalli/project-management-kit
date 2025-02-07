@@ -1,0 +1,351 @@
+$subtask-border-color: #ebebeb;
+$subtask-border-color--hover: #b3b7b8;
+$subtask-border-color--active: #8799f5;
+
+$subtask-column-background-color--hover: #f9f8f8;
+$subtask-column-background-color--active: #b8c4ff2b;
+
+&-subtask {
+
+    @import './subtask/header';
+
+    &-body {
+        padding-top: 10px;
+        padding-bottom: 16px;
+    }
+
+    &-list {
+        &-item {
+            padding-right: calc($view-task-padding * 1);
+            position: relative;
+            background-color: white;
+
+            &-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: calc($view-task-padding * 1);
+                overflow: hidden;
+            }
+
+            &-left, &-right {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                border-top: 1px solid $subtask-border-color;
+                border-bottom: 1px solid $subtask-border-color;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 4px;
+                padding-right: 4px;
+                cursor: pointer;
+            }
+
+            &-left {
+                gap: 6px;
+                flex: 1;
+            }
+
+            &-right {
+                flex: none;
+                padding-left: 16px;
+                justify-content: flex-end;
+                // margin-right: -32px;
+            }
+
+            // &:hover &-right {
+            //     // transition: margin-right 50ms ease-in-out;
+            //     margin-right: 0;
+            // }
+
+            &:not([is-active]:not([is-active=false])):hover &-left, &:not([is-active]:not([is-active=false])):hover &-right {
+                border-top: none;
+                border-bottom: none;
+            }
+
+            &:not([is-active]:not([is-active=false])):hover &-container {
+                border-top: 1px solid $subtask-border-color--hover;
+                border-bottom: 1px solid $subtask-border-color--hover;
+            }
+
+            &:not([is-active]:not([is-active=false])):hover {
+                background-color: $subtask-column-background-color--hover;
+                z-index: 2;
+            }
+
+            &[is-active=input] &-left, &[is-active=input] &-right {
+                border-top: none;
+                border-bottom: none;
+            }
+
+            &[is-active=input] &-container {
+                border-top: 1px solid $subtask-border-color--active;
+                border-bottom: 1px solid $subtask-border-color--active;
+            }
+
+            &[is-active=input] {
+                background-color: $subtask-column-background-color--active;
+                z-index: 5;
+            }
+
+            &-sort {
+                position: absolute;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 10px;
+                cursor: grab;
+                visibility: hidden;
+
+                &-icon {
+                    display: flex;
+                }
+            }
+
+            &:hover &-sort {
+                visibility: visible;
+            }
+
+            &-checkmark {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 1px solid #999999;
+                font-size: 8px;
+                background-color: transparent;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: none;
+                cursor: pointer;
+
+                &-icon {
+                    display: flex;
+                }
+            }
+
+            &-title {
+                &-input {
+                    // height: 22px;
+                    border: 1px solid transparent;
+                    padding: 2px 6px;
+                    font-size: to-rem(14);
+                    height: 24px;
+                    border-radius: 35px;
+                    background-color: transparent;
+                }
+            }
+
+            &:not([is-active]:not([is-active=false])):hover &-title-input {
+                border-color: #e6e6e6;
+                background-color: white;
+            }
+
+            &:not([is-active]:not([is-active=false])) &-title-input:hover {
+                border-color: #b4b4b4;
+            }
+
+            &-count-list {
+                display: flex;
+                gap: 10px;
+                margin-left: 8px;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    border-radius: 18px;
+                    color: #7e7e7e;
+
+                    &-icon {
+                        display: flex;
+                        font-size: 11px;
+                        position: relative;
+                    }
+
+                    &-text {
+                        font-size: to-rem(11);
+                    }
+                }
+            }
+
+            &-more-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            &-date {
+                &-placeholder {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px dashed #727272;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    color: #727272;
+                    cursor: pointer;
+
+                    &-icon {
+                        display: flex;
+                    }
+                }
+
+                &-value {
+                    display: flex;
+                    gap: 4px;
+                    color: #646464;
+                    padding: 4px 6px;
+                    border-radius: 35px;
+
+                    &-icon {
+                        font-size: 12px;
+                        display: flex;
+                    }
+
+                    &-text {
+                        font-size: to-rem(12);
+                    }
+
+                    &:not([is-danger]:not([is-danger=false])):hover {
+                        background-color: asset('color', 'hover');
+                    }
+
+                    &[is-danger]:not([is-danger=false]) {
+                        background-color: rgb(237 86 86 / 19%);
+                        color: asset('color', 'error');
+                        // background-color: asset('color', 'error');
+                        // color: white;
+                    }
+                }
+            }
+
+            &-add-member {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px dashed #727272;
+                border-radius: 50%;
+                font-size: 12px;
+                color: #727272;
+                cursor: pointer;
+                background-color: transparent;
+
+                &-icon {
+                    display: flex;
+                }
+            }
+
+            &-member-list {
+                display: flex;
+
+                &-item {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid white;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    &--more {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: to-rem(10);
+                        // font-weight: 500;
+                        color: white;
+                        background-color: asset('color', 'theme');
+                    }
+                }
+
+                &-item + &-item {
+                    margin-left: -10px;
+                }
+            }
+
+            &-action-button {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #727272;
+                margin-left: 8px;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: asset('color', 'hover-dark');
+                }
+
+                &-icon {
+                    display: flex;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &-item + &-item {
+            margin-top: -1px;
+        }
+
+        &-item-add {
+            height: 32px;
+            padding-left: calc(
+                24px +
+                4px +
+                16px +
+                6px +
+                6px
+            );
+            cursor: pointer;
+            color: #727272;
+            font-family: asset('font', 'heading');
+
+            &:hover {
+                background-color: $subtask-column-background-color--hover;
+            }
+
+            &-container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            &-icon {
+                font-size: 10px;
+                display: flex;
+            }
+
+            &-text {
+                font-size: to-rem(13);
+            }
+        }
+    }
+}

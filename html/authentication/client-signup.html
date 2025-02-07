@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Signup</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/client-signup.css">
+</head>
+<body>
+    <section class="authentication authentication--client-signup">
+        <div class="authentication__layouts">
+            <div class="authentication__layout authentication__layout--main">
+                <route name="Sign up" get="step?=1">
+                    <div class="auth-panel" panel-name="step1">
+                        <div class="auth-panel__container">
+                            <div class="auth-panel__header">
+                                <div class="auth-panel__header-logo">
+                                    <img src="/asset/image/logo/large-b.png" alt="...">
+                                </div>
+                                <!-- <include path="panel-header" heading="Sign up" description="Step 1 - Create your account"></include> -->
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="client-signup/create-account-form"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="oauth" oauth-show-icon-only="true"></include>
+                                <include path="user-action-message" message="Already have an account? <a href='./login.html'>Sign in</a>."></include>
+                                <!-- <include path="showcase"></include> -->
+                            </div>
+                        </div>
+                    </div>
+                </route>
+
+                <route name="Verification - OTP" get="step=otp">
+                    <include path="logo"></include>
+                    <div class="auth-panel" panel-name="step2-otp">
+                        <div class="auth-panel__container">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Verification" description="Verify your account"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="otp-form" submit-button-push-link="?step=3"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="open-email-buttons"></include>
+                                <include path="otp-sent-alert" message="The OTP has been sent to <b>you*****il@company.com</b>! If not in your inbox, check spam." resend-text="Didn't you receive the OTP?" resend-button-label="Resend OTP" resend-button-disabled="true"></include>
+                            </div>
+                        </div>
+                    </div>
+                </route>
+
+                
+                <route  name="Verification - Link" get="step=verify-email">
+                    <include path="logo"></include>
+                    <div class="auth-panel" panel-name="step2-link">
+                        <div class="auth-panel__container">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Confirm your email" description="Step 2 - Confirm your email"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <!-- <include path="email-verification-form"></include> -->
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="email-sent-alert" message="Confirmation email sent to <b>youremail@company.com</b>! If not in your inbox, check spam." resend-text="Didn't you receive the email?" resend-button-label="Resend Email" resend-button-disabled="true"></include>
+                            </div>
+                        </div>
+                    </div>
+                </route>
+                <include path="terms-message"></include>
+            </div>
+            <div class="authentication__layout authentication__layout--promo">
+                
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>
+</html>

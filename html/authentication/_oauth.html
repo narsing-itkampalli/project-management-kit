@@ -1,0 +1,21 @@
+<div class="oauth">
+    <div class="oauth__or">
+        <span>Or continue with</span>
+    </div>
+    <div class="oauth__options" same-width=".oauth__option-container" show-icon-only="{{ oauth-show-icon-only }}">
+        <use-component name="oauth-option" provider-name="Google" provider-logo="google.png"></use-component>
+        <use-component name="oauth-option" provider-name="Github" provider-logo="github.png"></use-component>
+        <use-component name="oauth-option" provider-name="Facebook" provider-logo="facebook.webp"></use-component>
+    </div>
+</div>
+
+<component name="oauth-option">
+    <a href="#" class="oauth__option">
+        <div class="oauth__option-container">
+            <div class="oauth__option-icon">
+                <img source="/asset/image/oauth/{{ provider-logo }}" alt="{{ provider-name }}">
+            </div>
+            <div class="oauth__option-name">Continue with {{ provider-name }}</div>
+        </div>
+    </a>
+</component>

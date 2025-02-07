@@ -1,0 +1,114 @@
+<div class="notification-popup" hide-arrow="false">
+    <span class="notification-popup-position-arrow"></span>
+    <div class="notification-popup__container">
+        <div class="notification-popup__header">
+            <div class="notification-popup__header-row notification-popup__header-row--title-row">
+                <div class="notification-popup__header-row-column">
+                    <h2 class="notification-popup__header-heading">Notifications</h2>
+                    <!-- <div class="description">You have <span class="highlight">3 notifications</span> today.</div> -->
+                </div>
+                <div class="header-row-column">
+                    <div class="notification-popup__header-action-list">
+                        <!-- <button type="button" class="notification-popup__header-action-list-item notification-popup__header-action-list-item--close">
+                            <span class="notificati on-popup__header-action-list-item-icon">
+                                <icon name="mdi-close"></icon>
+                            </span>
+                        </button> -->
+                        <!-- <button type="button" class="notification-popup__header-action-list-item notification-popup__header-action-list-item--highlight notification-popup__header-action-list-item--mark-all" has-label="true" is-disabled="false">
+                            <span class="notification-popup__header-action-list-item-icon">
+                                <icon name="la--check-double"></icon>
+                            </span>
+                            <span class="notification-popup__header-action-list-item-text">
+                                Mark all read
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="notification-popup__header-row notification-popup__header-row--filter-row">
+                <div class="notification-popup__header-row-column">
+                    <div class="notification-popup__active-filter-list-group">
+                        <div class="notification-popup__active-filter-list">
+                            <div class="notification-popup__active-filter-list-item" is-active="true">
+                                <span class="notification-popup__active-filter-list-item-text">
+                                    <span class="notification-popup__active-filter-list-item-text--name">All</span>
+                                    <span class="notification-popup__active-filter-list-item-text--badge">15</span>
+                                </span>
+                            </div>
+                            <div class="notification-popup__active-filter-list-item">
+                                <span class="notification-popup__active-filter-list-item-text">
+                                    <span class="notification-popup__active-filter-list-item-text--name">Following</span>
+                                    <span class="notification-popup__active-filter-list-item-text--badge">4</span>
+                                </span>
+                            </div>
+                            <div class="notification-popup__active-filter-list-item">
+                                <span class="notification-popup__active-filter-list-item-text">
+                                    <span class="notification-popup__active-filter-list-item-text--name">Mentions</span>
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <div class="notification-popup__active-filter-list">
+                            <div class="notification-popup__active-filter-list-item">
+                                <span class="notification-popup__active-filter-list-item-text">
+                                    <span class="notification-popup__active-filter-list-item-text--name">Archived</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-popup__header-row-column">
+                    <button type="button" class="notification-popup__filter-customization-button">
+                        <span class="notification-popup__filter-customization-button-icon">
+                            <icon name="carbon--search"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="notification-popup__filter-customization-button">
+                        <span class="notification-popup__filter-customization-button-icon">
+                            <icon name="tdesign--adjustment"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="notification-popup__body">
+            <include path="notification-popup/enable-push-notification-alert"></include>
+            <div class="notification-popup__list-group">
+                <include path="notification-popup/notification-list"></include>
+            </div>
+        </div>
+        <div class="notification-popup__footer">
+            <div class="notification-popup__footer-column">
+                <div class="notification-popup__footer-action-list">
+                    <a href="#">
+                        <button type="button" class="notification-popup__footer-action-list-item notification-popup__footer-action-list-item--highlight" has-label="true">
+                            <span class="notification-popup__footer-action-list-item-icon">
+                                <icon name="mdi--external-link"></icon>
+                            </span>
+                            <span class="notification-popup__footer-action-list-item-text">View All</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="notification-popup__footer-column">
+                <div class="notification-popup__footer-action-list">
+                    <button type="button" class="notification-popup__footer-action-list-item notification-popup__footer-action-list-item--highlight notification-popup__footer-action-list-item--large" is-disabled="false">
+                        <span class="notification-popup__footer-action-list-item-icon">
+                            <icon name="la--check-double"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="notification-popup__footer-action-list-item">
+                        <span class="notification-popup__footer-action-list-item-icon">
+                            <icon name="uil--setting"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="notification-popup__footer-action-list-item">
+                        <span class="notification-popup__footer-action-list-item-icon">
+                            <icon name="mdi--volume-high"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+.auth-progress-indicator {
+    display: flex;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not([show-label=false]) {
+        padding-bottom: 28px;
+    }
+
+    &__step {
+        flex: 1;
+        position: relative;
+    
+        &:not(:first-child)::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #ccd1d5;
+            position: absolute;
+            // left: 50%;
+            right: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-number {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #5c5f64;
+            border: 1px solid #ccd1d5;
+            background-color: #f5f3f3;
+            border-radius: 50%;
+            box-shadow: 0 0 2px lighten($color: asset('color', 'theme'), $amount: 15%);
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 5;
+            position: relative;
+        }
+
+        &-checkmark {
+            font-size: 12px;
+            display: flex;
+        }
+
+        &-label {
+            font-size: to-rem(12);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-top: 12px;
+            width: 100%;
+            color: #b5b5b5;
+            // color: #5c5f64;
+            // font-weight: 500;
+        }
+    
+        &[step-passed=true], &[step-active=true] {
+            &::before {
+                background-color: asset('color', 'theme');
+            }
+        }
+    }
+
+    &[show-label=false] &__step-label {
+        display: none;
+    }
+
+    &__step[step-passed=true] &__step-number {
+        background-color: asset('color', 'theme');
+        border-color: asset('color', 'theme');
+        color: white;
+    }
+
+    &__step[step-passed=true] &__step-label {
+        color: asset('color', 'text');
+    }
+
+    &__step[step-active=true] &__step-number {
+        color: asset('color', 'theme');
+        border: 1px solid asset('color', 'theme');
+        background-color: #FBFCFD;
+        font-weight: 500;
+    }
+
+    &__step[step-active=true] &__step-label {
+        color: asset('color', 'theme');
+        font-weight: 500;
+    }
+}

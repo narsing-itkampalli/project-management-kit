@@ -1,0 +1,124 @@
+/*
+    Jost
+    Montserrat
+    Sora
+    Outfit
+    Public Sans
+    Sora
+    Tangerine
+    Roboto
+    Mulish
+*/
+.manage-leave {
+  width: 100%;
+}
+
+.request-leave {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 640px;
+  width: 500px;
+  background-color: white;
+  max-height: calc(100vh - 52px - 30px);
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
+  z-index: 1001;
+}
+.request-leave__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.request-leave__header, .request-leave__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: none;
+}
+.request-leave__header-action-list, .request-leave__footer-action-list {
+  display: flex;
+  gap: 8px;
+}
+.request-leave__header-action, .request-leave__footer-action {
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.request-leave__header-action:hover, .request-leave__footer-action:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.request-leave__header-action-icon, .request-leave__footer-action-icon {
+  display: flex;
+}
+.request-leave__header {
+  height: 54px;
+  border-bottom: 1px solid #E9EDF1;
+}
+.request-leave__header-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+}
+.request-leave__header-action {
+  width: 34px;
+  height: 34px;
+}
+.request-leave__header-action-icon {
+  font-size: 14px;
+}
+.request-leave__body {
+  flex: 1;
+  overflow: auto;
+}
+.request-leave__footer {
+  height: 52px;
+  border-top: 1px solid #E9EDF1;
+}
+.request-leave__footer-left {
+  margin-left: -8.5px;
+}
+.request-leave__footer-action {
+  width: 32px;
+  height: 32px;
+}
+.request-leave__footer-action-icon {
+  font-size: 15px;
+}
+.request-leave__footer-button-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.request-leave__footer-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  height: 34px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.request-leave__footer-button--cancel {
+  background-color: transparent;
+}
+.request-leave__footer-button--submit {
+  background-color: #556EE6;
+  color: white;
+  box-shadow: 0 1px 2px rgba(85, 110, 230, 0.3);
+}
+.request-leave__footer-button-text {
+  font-size: 0.8666666667rem;
+}/*# sourceMappingURL=manage-leave.css.map */

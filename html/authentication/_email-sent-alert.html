@@ -1,0 +1,14 @@
+<div class="email-sent-alert">
+    <div class="email-sent-alert__message">
+        <div class="email-sent-alert__message-icon">
+            <img src="/asset/image/placeholder/placeholder-img.png" alt="...">
+        </div>
+        <div class="email-sent-alert__message-text">
+            {{ message }}
+        </div>
+    </div>
+    <include path="open-email-buttons"></include>
+    <div class="email-sent-alert__resend">
+        {{ resend-text }} <button type="button" aria-disabled="{{ resend-button-disabled }}" class="email-sent-alert__resend-button">{{ resend-button-label }}</button>
+    </div>
+</div>

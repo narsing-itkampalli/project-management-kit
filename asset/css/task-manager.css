@@ -1,0 +1,1173 @@
+@charset "UTF-8";
+/*
+    Jost
+    Montserrat
+    Sora
+    Outfit
+    Public Sans
+    Sora
+    Tangerine
+    Roboto
+    Mulish
+*/
+.task-manager__container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 52px);
+}
+.task-manager__header {
+  padding-top: 8px;
+  background-color: white;
+  flex: none;
+}
+.task-manager__header-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #E9EDF1;
+  height: 84px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.task-manager__header-icon-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.task-manager__header-icon {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  margin-top: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.task-manager__header-icon-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.task-manager__header-icon-container::after {
+  box-shadow: inset 0px 0px 6px 0 rgba(0, 0, 0, 0.1647058824);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.task-manager__header-icon-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: 1;
+  visibility: hidden;
+}
+.task-manager__header-icon:hover .task-manager__header-icon-container::before {
+  visibility: visible;
+}
+.task-manager__header-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.task-manager__header-icon-edit {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.384);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+.task-manager__header-icon-edit:hover {
+  background-color: #f4f8ff;
+}
+.task-manager__header-icon-edit-icon {
+  font-size: 12px;
+  display: flex;
+}
+.task-manager__header-icon-edit:hover .task-manager__header-icon-edit-icon {
+  color: #556EE6;
+}
+.task-manager__header-icon:not(:hover) .task-manager__header-icon-edit {
+  display: none;
+}
+.task-manager__header-content {
+  flex: 1;
+}
+.task-manager__header-content-row {
+  padding-left: 8px;
+}
+.task-manager__header-content-row-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.task-manager__header-content-row-column {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.task-manager__header-content-row:not(:last-child) {
+  padding-bottom: 6px;
+}
+.task-manager__header-content-row + .task-manager__header-content-row {
+  padding-top: 6px;
+}
+.task-manager__header-title-section {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.task-manager__header-title {
+  position: relative;
+}
+.task-manager__header-title-text, .task-manager__header-title-input {
+  font-size: 1.3333333333rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  color: #2E363D;
+}
+.task-manager__header-title-text:hover {
+  color: #556EE6;
+}
+.task-manager__header-star-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: #5f5f5f;
+}
+.task-manager__header-star-button-icon {
+  display: flex;
+}
+.task-manager__header-star-button:hover {
+  color: #ffa200;
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.task-manager__header-star-button[is-active]:not([is-active=false]) {
+  color: #ffa200;
+}
+.task-manager__header-member-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.task-manager__header-member-list {
+  display: flex;
+}
+.task-manager__header-member-list-item {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid white;
+}
+.task-manager__header-member-list-item:hover {
+  transform: translateY(-1px);
+  z-index: 2 !important;
+}
+.task-manager__header-member-list-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.task-manager__header-member-list-item--more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #556EE6;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.task-manager__header-member-list-item + .task-manager__header-member-list-item {
+  margin-left: -10px;
+  z-index: 1;
+}
+.task-manager__header-member-add {
+  position: relative;
+}
+.task-manager__header-member-add::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12px;
+  background-color: #D9D9D9;
+  height: 22px;
+  width: 1px;
+}
+.task-manager__header-member-add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 35px;
+  gap: 8px;
+  background-color: #556EE6;
+  border: none;
+  outline: none;
+  color: white;
+  height: 28px;
+  font-size: 0.9333333333rem;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2509803922);
+}
+.task-manager__header-member-add-button-icon {
+  font-size: 16px;
+}
+.task-manager__header-main-context-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.task-manager__header-main-context-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.task-manager__header-add {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+.task-manager__header-add-quick {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  padding-right: 8px;
+  font-weight: 500;
+  height: 100%;
+  border: 1px solid #dadada;
+  border-radius: 6px 0 0 6px;
+}
+.task-manager__header-add-quick-icon {
+  font-size: 12px;
+  color: #535353;
+}
+.task-manager__header-add-quick:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+  border-color: #b1b1b1;
+  z-index: 2;
+}
+.task-manager__header-add-option-toggle {
+  padding: 0 6px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #dadada;
+  height: 100%;
+  border: 1px solid #dadada;
+  border-radius: 0 6px 6px 0;
+  margin-left: -1px;
+  z-index: 1;
+}
+.task-manager__header-add-option-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+  border-color: #b1b1b1;
+  z-index: 2;
+}
+.task-manager__header-add-option-toggle-icon {
+  display: flex;
+}
+.task-manager__header-view-list {
+  display: flex;
+  padding-left: 12px;
+  position: relative;
+  gap: 4px;
+}
+.task-manager__header-view-list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #D9D9D9;
+  height: 22px;
+  width: 1px;
+}
+.task-manager__header-view-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 0.9333333333rem;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+  height: 28px;
+}
+.task-manager__header-view-list-item-link {
+  color: #2E363D;
+}
+.task-manager__header-view-list-item:not([is-active]), .task-manager__header-view-list-item[is-active=false] {
+  cursor: pointer;
+}
+.task-manager__header-view-list-item:not([is-active]):hover, .task-manager__header-view-list-item[is-active=false]:hover {
+  color: #556EE6;
+}
+.task-manager__header-view-list-item[is-active]:not([is-active=false]) {
+  transition: none;
+  color: #556EE6;
+  cursor: default;
+  padding-right: 4px;
+  border: 1px solid #556EE6;
+  border-radius: 35px;
+  background-color: #ebefff;
+}
+.task-manager__header-view-list-item-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.task-manager__header-view-list-item-icon {
+  display: flex;
+}
+.task-manager__header-view-list-item-option-toggle {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  color: #646464;
+}
+.task-manager__header-view-list-item-option-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+  color: #2E363D;
+}
+.task-manager__header-view-list-item:not([is-active]) .task-manager__header-view-list-item-option-toggle, .task-manager__header-view-list-item[is-active=false] .task-manager__header-view-list-item-option-toggle {
+  display: none;
+}
+.task-manager__header-option-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.task-manager__header-option-list-item {
+  height: 28px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.task-manager__header-option-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.task-manager__header-option-list-item-content {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.task-manager__header-option-list-item-icon {
+  display: flex;
+  font-size: 14px;
+}
+.task-manager__header-option-list-item-label {
+  font-size: 0.9333333333rem;
+}
+.task-manager__header-option-list-item--round {
+  width: 28px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+.task-manager__header-sort-menu {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 320px;
+  height: 400px;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.26);
+  background-color: white;
+  border-radius: 4px;
+}
+.task-manager__header-sort-menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.task-manager__header-sort-menu-header, .task-manager__header-sort-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+  padding-left: 16px;
+  padding-right: 16px;
+  align-items: center;
+  flex: none;
+}
+.task-manager__header-sort-menu-header {
+  border-bottom: 1px solid #E9EDF1;
+}
+.task-manager__header-sort-menu-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 0.4px;
+}
+.task-manager__header-sort-menu-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 12px;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+}
+.task-manager__header-sort-menu-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.task-manager__header-sort-menu-close-button-icon {
+  display: flex;
+}
+.task-manager__header-sort-menu-body {
+  flex: 1;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: auto;
+}
+.task-manager__header-sort-menu-footer {
+  border-top: 1px solid #E9EDF1;
+}
+.task-manager__header-sort-menu-clear-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 35px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+.task-manager__header-sort-menu-clear-button-icon {
+  font-size: 14px;
+  display: flex;
+}
+.task-manager__header-sort-menu-clear-button-text {
+  font-size: 0.9333333333rem;
+}
+.task-manager__header-sort-menu-optionmenu-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.task-manager__header-sort-menu-optionmenu-option:hover {
+  background-color: rgba(191, 205, 255, 0.3137254902);
+}
+.task-manager__header-sort-menu-optionmenu-option-icon {
+  font-size: 16px;
+  display: flex;
+  color: #838383;
+}
+.task-manager__header-sort-menu-optionmenu-option-text {
+  font-size: 0.9333333333rem;
+}
+.task-manager__header-search-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.task-manager__header-search-menu-input-wrapper {
+  position: relative;
+  width: 320px;
+  height: 28px;
+  overflow: hidden;
+}
+.task-manager__header-search-menu-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  border: none;
+  border: 1px solid #d1d1d1;
+  border-radius: 35px;
+  background-color: white;
+  font-size: 0.9333333333rem;
+  box-shadow: 0 0 2px #ededee;
+}
+.task-manager__header-search-menu-input::-moz-placeholder {
+  color: #b5b5b5;
+}
+.task-manager__header-search-menu-input::placeholder {
+  color: #b5b5b5;
+}
+.task-manager__header-search-menu-input:focus, .task-manager__header-search-menu-input [aria-active=true] {
+  border-color: #8194ed;
+  box-shadow: 0 0 2px #98a7f0;
+}
+.task-manager__header-search-menu-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+.task-manager__header-search-menu-close-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.9333333333rem;
+  color: #556EE6;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: white;
+}
+.task-manager__body {
+  flex: 1;
+}
+.task-manager__body-container {
+  height: 100%;
+  width: 100%;
+}
+
+.project-select-menu {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 260px;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  z-index: 50000;
+}
+.project-select-menu-container {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.project-select-menu-group-name, .project-select-menu-title {
+  font-size: 0.8666666667rem;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  color: #797979;
+  font-weight: 500;
+}
+.project-select-menu-group + .project-select-menu-group {
+  border-top: 1px solid #E9EDF1;
+  margin-top: 6px;
+  padding-top: 6px;
+}
+.project-select-menu-item {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  gap: 16px;
+  padding-left: 16px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+}
+.project-select-menu-item-checkmark {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: #585858;
+  flex: none;
+}
+.project-select-menu-item-checkmark-icon {
+  display: flex;
+}
+.project-select-menu-item:not([is-checked]:not([is-checked=false])) .project-select-menu-item-checkmark-icon {
+  display: none;
+}
+.project-select-menu-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.project-select-menu-item:not([is-disabled]:not([is-disabled=false])):hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+
+.project-select-menu--project-status {
+  overflow: hidden;
+}
+.project-select-menu-last-project-status {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #E9EDF1;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  padding-top: 16px;
+}
+.project-select-menu-last-project-status:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.project-select-menu-last-project-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: red;
+}
+.project-select-menu-last-project-status-label {
+  font-size: 0.8666666667rem;
+  margin-bottom: 8px;
+  margin-left: -4px;
+  color: #797979;
+  font-weight: 500;
+}
+.project-select-menu-last-project-status-info {
+  padding-left: 2px;
+}
+.project-select-menu-last-project-status-name {
+  font-weight: 500;
+}
+.project-select-menu-last-project-status-additional-info {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 8px;
+  color: #949494;
+}
+.project-select-menu-last-project-status-additional-info-item + .project-select-menu-last-project-status-additional-info-item {
+  padding-left: 10px;
+  position: relative;
+}
+.project-select-menu-last-project-status-additional-info-item + .project-select-menu-last-project-status-additional-info-item::before {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  font-size: 8px;
+}
+.project-select-menu-last-project-status-owner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.project-select-menu-last-project-status-owner-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.project-select-menu-last-project-status-owner-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.project-select-menu-last-project-status-owner-name {
+  font-size: 0.8rem;
+}
+.project-select-menu-last-project-status-time {
+  font-size: 0.8rem;
+}
+.project-select-menu-item-project-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #E6E6E6;
+  height: 26px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 35px;
+}
+.project-select-menu-item-project-status-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  border: 1px solid transparent;
+}
+.project-select-menu-item-project-status-text {
+  font-size: 0.8rem;
+}
+
+.create-project-status-update {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.507);
+  z-index: 50000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.create-project-status-update__container {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.create-project-status-update__header {
+  height: 48px;
+  border-bottom: 1px solid #E9EDF1;
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.create-project-status-update__header-action-list {
+  display: flex;
+  gap: 8px;
+}
+.create-project-status-update__header-action-list-item {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-project-status-update__header-action-list-item-icon {
+  display: flex;
+  font-size: 14px;
+}
+.create-project-status-update__header-action-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.create-project-status-update__heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+.create-project-status-update__body {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+}
+.create-project-status-update__body-content {
+  flex: 1;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.create-project-status-update__body-sidebar {
+  width: 240px;
+  height: 100%;
+  border-left: 1px solid #E9EDF1;
+  flex: none;
+}
+.create-project-status-update__body-sidebar:not([is-active]:not([is-active=false])) {
+  display: none;
+}
+.create-project-status-update__title-section {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E9EDF1;
+  padding-bottom: 8px;
+}
+.create-project-status-update__title {
+  position: relative;
+}
+.create-project-status-update__title-text {
+  visibility: hidden;
+}
+.create-project-status-update__title-text, .create-project-status-update__title-input {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px;
+  min-height: 30px;
+  min-width: 40px;
+}
+.create-project-status-update__title-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+.create-project-status-update__info {
+  margin-top: 12px;
+}
+.create-project-status-update__info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.create-project-status-update__info-item-label {
+  min-width: 120px;
+  font-size: 0.8rem;
+  font-family: Poppins, sans-serif;
+}
+.create-project-status-update__info-item-project-owner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.create-project-status-update__info-item-project-owner-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.create-project-status-update__info-item-project-owner-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.create-project-status-update__info-item-project-owner-name {
+  font-size: 0.8rem;
+}
+.create-project-status-update__info-item + .create-project-status-update__info-item {
+  margin-top: 12px;
+}
+.create-project-status-update__attachment {
+  margin-top: 18px;
+}
+.create-project-status-update__attachment-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 35px;
+  gap: 6px;
+  cursor: pointer;
+  border: 1px solid #556EE6;
+  color: #556EE6;
+}
+.create-project-status-update__attachment-button-icon {
+  font-size: 12px;
+  display: flex;
+}
+.create-project-status-update__attachment-button-label {
+  font-size: 0.8rem;
+}
+.create-project-status-update__attachment-button:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.create-project-status-update__summary {
+  margin-top: 18px;
+}
+.create-project-status-update__summary-editor {
+  min-height: 160px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+  padding: 8px;
+}
+.create-project-status-update__summary-editor h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.create-project-status-update__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.create-project-status-update__history {
+  padding: 16px 16px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  scrollbar-width: thin;
+}
+.create-project-status-update__history-item {
+  position: relative;
+  display: flex;
+}
+.create-project-status-update__history-item-gutter {
+  width: 16px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.create-project-status-update__history-item-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  flex: none;
+}
+.create-project-status-update__history-item-circle-icon {
+  font-size: 0.5333333333rem;
+  display: flex;
+}
+.create-project-status-update__history-item-gutter-line {
+  width: 2px;
+  height: calc(100% - 20px);
+  background-color: rgb(221, 221, 221);
+}
+.create-project-status-update__history-item-info {
+  padding-left: 16px;
+  padding-top: 2px;
+}
+.create-project-status-update__history-item-info-title {
+  font-size: 0.9333333333rem;
+  font-weight: 500;
+}
+.create-project-status-update__history-item-info--secondary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.create-project-status-update__history-item-info-owner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.create-project-status-update__history-item-info-owner-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.create-project-status-update__history-item-info-owner-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.create-project-status-update__history-item-info-owner-name {
+  font-size: 0.8rem;
+}
+.create-project-status-update__history-item-info-time {
+  font-size: 0.8rem;
+  color: rgb(156, 156, 156);
+}
+.create-project-status-update__history-item:last-child .create-project-status-update__history-item-gutter-line {
+  visibility: hidden;
+}
+.create-project-status-update__history-item + .create-project-status-update__history-item {
+  margin-top: 4px;
+}
+.create-project-status-update__footer {
+  height: 52px;
+  border-top: 1px solid #E9EDF1;
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.create-project-status-update__notification {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.create-project-status-update__notification-setting {
+  width: 28px;
+  height: 28px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.create-project-status-update__notification-setting:hover {
+  background-color: rgba(0, 0, 0, 0.0470588235);
+}
+.create-project-status-update__notification-count {
+  font-size: 0.8rem;
+  color: #6d6d6d;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.create-project-status-update__notification-count-number {
+  font-weight: 600;
+  color: #556EE6;
+  display: flex;
+}
+.create-project-status-update__submit {
+  display: flex;
+  width: 98px;
+  height: 30px;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  background-color: #556EE6;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9333333333rem;
+}
+
+.project-status-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E6E6E6;
+  height: 26px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 35px;
+  background-color: transparent;
+  gap: 8px;
+}
+.project-status-toggle:not(.project-status-toggle--no-indicator) {
+  cursor: pointer;
+}
+.project-status-toggle__content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.project-status-toggle__content-color-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  border: 1px solid transparent;
+}
+.project-status-toggle__content-label {
+  font-size: 0.8rem;
+}
+.project-status-toggle__indicator {
+  display: flex;
+  font-size: 10px;
+  color: #a1a1a1;
+}
+
+.task-list-view {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.task-board-view {
+  width: 100%;
+  height: 100%;
+}
+
+.task-detail-view {
+  width: 100%;
+  height: 100%;
+}
+
+.task-calendar-view {
+  width: 100%;
+  height: 100%;
+}
+
+.task-timeline-view {
+  width: 100%;
+  height: 100%;
+}
+
+.task-gantt-view {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=task-manager.css.map */

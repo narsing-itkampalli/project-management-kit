@@ -1,0 +1,31 @@
+<div class="quick-search__menu-result-group">
+    <include-attribute name="view-recent-searches">
+        <button type="button" class="quick-search__menu-result-group-view-all-button" push="?search-history">
+            <span class="quick-search__menu-result-group-view-all-button-text">View all</span>
+            <span class="quick-search__menu-result-group-view-all-button-icon">
+                <icon name="chevron-right"></icon>
+            </span>
+        </button>
+    </include-attribute>
+    <include path="header" group-name="Recent" group-count="" group-header-right="$view-recent-searches"></include>
+    <div class="quick-search__menu-result-group-body">
+        <div class="quick-search__menu-result-item quick-search__menu-result-item-recent">
+            <div class="quick-search__menu-result-item-recent-left">
+                <div class="quick-search__menu-result-item-recent-icon">
+                    <icon name="mdi--recent"></icon>
+                </div>
+                <div class="quick-search__menu-result-item-recent-text">
+                    <span class="quick-search__menu-result-item-recent-text-keyword">2 Step verification</span>
+                    <span class="quick-search__menu-result-item-recent-text-time">2 months ago</span>
+                </div>
+            </div>
+            <div class="quick-search__menu-result-item-recent-right">
+                <button type="button" class="quick-search__menu-result-item-recent-clear-button">
+                    <span class="quick-search__menu-result-item-recent-clear-button-icon">
+                        <icon name="mdi-close"></icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

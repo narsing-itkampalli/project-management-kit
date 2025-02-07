@@ -1,0 +1,27 @@
+&-priority {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 35px;
+    border: 1px solid #cfcfcf;
+    padding: 4px 6px;
+    // color: red;
+    // border-color: red;
+
+    &-content {
+        display: flex;
+        font-size: to-rem(12);
+        align-items: center;
+        gap: 4px;
+    }
+
+    &-icon {
+        display: flex;
+    }
+
+    &-toggle {
+        font-size: to-rem(10);
+        display: flex;
+        color: #9d9d9d;
+    }
+}

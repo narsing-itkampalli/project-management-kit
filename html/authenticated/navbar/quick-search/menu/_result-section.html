@@ -1,0 +1,16 @@
+<div class="quick-search__menu-result-section">
+    <route name="Default" get="search-type?=default">
+        <include path="result-section/group/recent"></include>
+        <include path="result-section/group/action"></include>
+        <include path="result-section/group/popular"></include>
+    </route>
+    <route name="Searched" get="search-type=searched">
+        <include path="result-section/group/task"></include>
+        <include path="result-section/group/project"></include>
+        <include path="result-section/group/file"></include>
+        <include path="result-section/group/user"></include>
+    </route>
+    <route name="Exception" get="search-type=exception">
+        <include path="result-section/exception"></include>
+    </route>
+</div>

@@ -1,0 +1,26 @@
+&-popular {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: asset('color', 'hover-dark');
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &-icon {
+        font-size: 16px;
+        display: flex;
+    }
+
+    &-text {
+        font-size: to-rem(14);
+    }
+}

@@ -1,0 +1,192 @@
+<div class="tasks__board-view">
+    <div class="tasks__board-view-container">
+        <div class="tasks__board-view-task-section-list">
+            <repeat value="4">
+                <div class="tasks__board-view-task-section">
+                    <div class="tasks__board-view-task-section-header">
+                        <div class="tasks__board-view-task-section-header-left">
+                            <div class="tasks__board-view-task-section-header-title">Recently assigned</div>
+                            <div class="tasks__board-view-task-section-header-task-count">168</div>
+                        </div>
+                        <div class="tasks__board-view-task-section-header-right">
+                            <div class="tasks__board-view-task-section-header-action-list">
+                                <button type="button" class="tasks__board-view-task-section-header-action-list-item">
+                                    <icon name="mdi-plus"></icon>
+                                </button>
+                                <button type="button" class="tasks__board-view-task-section-header-action-list-item" push="$context-menu--section">
+                                    <icon name="mdi-dots-vertical"></icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks__board-view-task-section-body">
+                        <div class="tasks__board-view-task-list">
+                            <repeat value="4">
+                                <div class="tasks__board-view-task-list-item">
+                                    <div class="tasks__board-view-task-list-item-alerts">
+                                        <div class="tasks__board-view-task-list-item-alert" style="background-color: rgb(204, 253, 212); color: #13df00;">
+                                            <span class="icon">
+                                                <icon name="mdi--stopwatch-outline"></icon>
+                                            </span>
+                                            <span class="text">5 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="tasks__board-view-task-list-item-header">
+                                        <div class="tasks__board-view-task-list-item-header-content">
+                                            <div class="tasks__board-view-task-list-item-header-left">
+                                                <button type="button" class="tasks__board-view-task-list-item-header-checkmark-button">
+                                                    <icon name="grommet-icons-checkmark"></icon>
+                                                </button>
+                                                <div class="tasks__board-view-task-list-item-header-title">File manager front-end</div>
+                                            </div>
+                                            <div class="tasks__board-view-task-list-item-header-right">
+                                                <button type="button" class="tasks__board-view-task-list-item-header-task-context-toggle" push="$context-menu--task">
+                                                    <icon name="mdi-dots-vertical"></icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tasks__board-view-task-list-item-body">
+                                        <div class="tasks__board-view-task-list-item-body-row-group">
+                                            <!-- <div class="tasks__board-view-task-list-item-body-row tasks__board-view-task-list-item-body-row--no-column">
+                                                <div class="tasks__board-view-task-list-item-thumbnail">
+                                                    <img src="/asset/temp/project/portfolio-website.jpeg" alt="...">
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="tasks__board-view-task-list-item-body-row tasks__board-view-task-list-item-body-row--no-column">
+                                                <div class="tasks__board-view-task-list-item-description">
+                                                    The customer asked to correct the last iteration of the concept. He didn't like the overall color styles. But overall like it.
+                                                </div>
+                                            </div> -->
+                                            <div class="tasks__board-view-task-list-item-body-row">
+                                                <div class="tasks__board-view-task-list-item-body-row-column">
+                                                    <div class="tasks__board-view-task-list-item-date">
+                                                        <div class="tasks__board-view-task-list-item-date-icon">
+                                                            <icon name="mdi-calendar-outline"></icon>
+                                                        </div>
+                                                        <div class="tasks__board-view-task-list-item-date-text">
+                                                            <span class="tasks__board-view-task-list-item-date-text--start">12 Nov 2024</span>
+                                                            <span class="tasks__board-view-task-list-item-date-text--icon">
+                                                                <icon name="mdi--arrow-right-thin"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-date-text--due">14 Nov 2024</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tasks__board-view-task-list-item-body-row-column">
+                                                    <div class="tasks__board-view-task-list-item-priority" push="$context-menu--priority" style="background-color: #ffe3e3; border-color: #e9272717; color: #e92727;">
+                                                        <div class="tasks__board-view-task-list-item-priority-content">
+                                                            <!-- <span class="tasks__board-view-task-list-item-priority-icon">
+                                                                <icon name="tabler--urgent"></icon>
+                                                            </span> -->
+                                                            <div class="tasks__board-view-task-list-item-priority-text">Urgent</div>
+                                                        </div>
+                                                        <!-- <div class="tasks__board-view-task-list-item-priority-toggle">
+                                                            <icon name="gridicons-chevron-down"></icon>
+                                                        </div> -->
+                                                    </div>
+                                                    <!-- <div class="tasks__board-view-task-list-item-timetracker">
+    
+                                                        <div class="tasks__board-view-task-list-item-timetracker-tracked">
+                                                            <span class="tasks__board-view-task-list-item-timetracker-tracked-icon">
+                                                                <icon name="mdi--stopwatch-outline"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-timetracker-tracked-text">5h 25m 6sec</span>
+                                                        </div>
+                                                        <button type="button" class="tasks__board-view-task-list-item-timetracker-button">
+                                                            <span class="tasks__board-view-task-list-item-timetracker-button-icon">
+                                                                <icon name="mdi-play"></icon>
+                                                            </span>
+                                                        </button>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tasks__board-view-task-list-item-body-row-group">
+                                            <div class="tasks__board-view-task-list-item-body-row tasks__board-view-task-list-item-body-row--no-column">
+                                                <div class="tasks__board-view-task-list-item-progress">
+                                                    <div class="tasks__board-view-task-list-item-progress-percent">68%</div>
+                                                    <div class="tasks__board-view-task-list-item-progress-bar">
+                                                        <span class="tasks__board-view-task-list-item-progress-bar-completed"></span>
+                                                    </div>
+                                                    <div class="tasks__board-view-task-list-item-progress-number">
+                                                        <span class="tasks__board-view-task-list-item-progress-number-completed">18</span>
+                                                        <span class="tasks__board-view-task-list-item-progress-number-break">/</span>
+                                                        <span class="tasks__board-view-task-list-item-progress-number-total">25</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tasks__board-view-task-list-item-footer">
+                                        <div class="tasks__board-view-task-list-item-footer-row-group">
+                                            <div class="tasks__board-view-task-list-item-footer-row">
+                                                <div class="tasks__board-view-task-list-item-footer-row-column">
+                                                    <div class="tasks__board-view-task-list-item-member-section">
+                                                        <button type="button" class="tasks__board-view-task-list-item-add-member-button">
+                                                            <icon name="mdi-plus"></icon>
+                                                        </button>
+                                                        <div class="tasks__board-view-task-list-item-member-list">
+                                                            <div class="tasks__board-view-task-list-item-member-list-item">
+                                                                <img src="/asset/temp/profile/1.jpg" alt="...">
+                                                            </div>
+                                                            <div class="tasks__board-view-task-list-item-member-list-item">
+                                                                <img src="/asset/temp/profile/2.jpg" alt="...">
+                                                            </div>
+                                                            <div class="tasks__board-view-task-list-item-member-list-item">
+                                                                <img src="/asset/temp/profile/3.jpg" alt="...">
+                                                            </div>
+                                                            <div class="tasks__board-view-task-list-item-member-list-item tasks__board-view-task-list-item-member-list-item--more">
+                                                                +9
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tasks__board-view-task-list-item-footer-row-column">
+                                                    <div class="tasks__board-view-task-list-item-count-list">
+                                                        <div class="tasks__board-view-task-list-item-count-list-item">
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-icon">
+                                                                <icon name="mdi--subtasks"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-text">2</span>
+                                                        </div>
+                                                        <div class="tasks__board-view-task-list-item-count-list-item" has-unread>
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-icon">
+                                                                <icon name="tabler--messages"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-text">2</span>
+                                                        </div>
+                                                        <div class="tasks__board-view-task-list-item-count-list-item">
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-icon">
+                                                                <icon name="mdi--attachment-vertical"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-count-list-item-text">2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="tasks__board-view-task-list-item-footer-row">
+                                            <div class="tasks__board-view-task-list-item-footer-row-column">
+                                                <div class="tasks__board-view-task-list-item-label-list">
+                                                    <repeat value="5">
+                                                        <div class="tasks__board-view-task-list-item-label-list-item">
+                                                            <span class="tasks__board-view-task-list-item-label-list-item-icon">
+                                                                <icon name="mdi--tag-outline"></icon>
+                                                            </span>
+                                                            <span class="tasks__board-view-task-list-item-label-list-item-text">Website</span>
+                                                        </div>
+                                                    </repeat>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </repeat>
+                        </div>
+                    </div>
+                </div>
+            </repeat>
+        </div>
+    </div>
+</div>

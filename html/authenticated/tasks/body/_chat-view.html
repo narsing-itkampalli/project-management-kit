@@ -1,0 +1,52 @@
+<div class="tasks__chat-view">
+    <div class="tasks__chat-view-container">
+        <div class="tasks__chat-view-sidebar">
+            <div class="tasks__chat-view-sidebar-header">
+
+            </div>
+            <div class="tasks__chat-view-sidebar-body">
+                <div class="tasks__chat-view-task-list">
+                    <repeat value="5">
+                        <div class="tasks__chat-view-task-list-item">
+                            <div class="tasks__chat-view-task-list-item-container">
+                                <div class="tasks__chat-view-task-list-item-row">
+                                    <div class="tasks__chat-view-task-list-item-column">
+                                        <div class="tasks__chat-view-task-list-item-status-icon"></div>
+                                        <div class="tasks__chat-view-task-list-item-title">File manager front-end</div>
+                                    </div>
+                                    <div class="tasks__chat-view-task-list-item-column">
+                                        <button type="button" class="tasks__chat-view-task-list-item-context-toggle" push="$context-menu--task">
+                                            <icon name="mdi-dots-vertical"></icon>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tasks__chat-view-task-list-item-row">
+                                    <div class="tasks__chat-view-task-list-item-column">
+                                        <div class="tasks__chat-view-task-list-item-date">
+                                            <span class="tasks__chat-view-task-list-item-date-icon">
+                                                <icon name="mdi--calendar-check-outline"></icon>
+                                            </span>
+                                            <span class="tasks__chat-view-task-list-item-date-text">12 Nov 2024</span>
+                                        </div>
+                                        <div class="tasks__chat-view-task-list-item-priority" push="$context-menu--priority" style="background-color: #ffe3e3; border-color: #e9272717; color: #e92727;">
+                                            <div class="tasks__chat-view-task-list-item-priority-content">
+                                                <div class="tasks__chat-view-task-list-item-priority-text">Urgent</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tasks__chat-view-task-list-item-column">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </repeat>
+                </div>
+            </div>
+            <div class="tasks__chat-view-sidebar-footer"></div>
+        </div>
+        <div class="tasks__chat-view-body">
+            <include path="../view-task"></include>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Signup</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/talent-signup.css">
+</head>
+<body>
+    <section class="authentication authentication--talent-signup">
+        <div class="authentication__layouts">
+            <div class="authentication__layout authentication__layout--main">
+                <include path="logo"></include>
+                <div class="auth-panel">
+                    <div class="auth-panel__container">
+                        <route name="Sign up" get="step?=1">
+                            <div class="auth-panel__header">
+                                <include path="back-button"></include>
+                                <include path="panel-header" heading="Sign up" description="Step 1 - Create your account"></include>
+                                <include path="progress-indicator"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="talent-signup/form"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="oauth"></include>
+                                <include path="user-action-message" message="Already have an account? <a href='./login.html'>Sign in</a>."></include>
+                            </div>
+                        </route>
+    
+                        
+                        <route name="Verification - OTP" get="step=otp">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Verification" description="Step 2 - Verify your account"></include>
+                                <include path="progress-indicator"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="otp-form" submit-button-push-link="?step=3"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="open-email-buttons"></include>
+                                <include path="otp-sent-alert" message="The OTP has been sent to <b>you*****il@company.com</b>! If not in your inbox, check spam." resend-text="Didn't you receive the OTP?" resend-button-label="Resend OTP" resend-button-disabled="true"></include>
+                            </div>
+                        </route>
+    
+                        
+                        <route  name="Verification - Link" get="step=verify-email">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Confirm your email" description="Step 2 - Confirm your email"></include>
+                                <include path="progress-indicator"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <!-- <include path="email-verification-form"></include> -->
+                            </div>
+                            <div class="auth-panel__footer">
+                                <include path="email-sent-alert" message="Confirmation email sent to <b>youremail@company.com</b>! If not in your inbox, check spam." resend-text="Didn't you receive the email?" resend-button-label="Resend Email" resend-button-disabled="true"></include>
+                            </div>
+                        </route>
+    
+                        
+                        <route  name="Personal info" get="step=3">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Your basic profile info" description="Step 2 - Your basic info"></include>
+                                <include path="progress-indicator"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="talent-signup/personal-info-form"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+    
+                            </div>
+                        </route>
+    
+                        
+                        <route  name="Additional info" get="step=4">
+                            <div class="auth-panel__header">
+                                <include path="panel-header" heading="Complete your profile" description="Step 2 - Complete your profile"></include>
+                                <include path="progress-indicator"></include>
+                            </div>
+                            <div class="auth-panel__body">
+                                <include path="talent-signup/additional-info-form" submit-button-push-link="?step=1"></include>
+                            </div>
+                            <div class="auth-panel__footer">
+    
+                            </div>
+                        </route>
+                    </div>
+                </div>
+                <include path="terms-message"></include>
+            </div>
+            <div class="authentication__layout authentication__layout--promo">
+                
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>
+</html>

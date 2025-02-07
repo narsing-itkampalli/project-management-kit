@@ -1,0 +1,35 @@
+&__otp-input-field {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+&__otp-input-wrapper {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    width: max-content;
+}
+
+&__otp-input-group {
+    display: flex;
+    gap: 8px;
+
+}
+
+&__otp-input {
+    width: 48px;
+    height: 42px;
+    border: 1px solid #E0E4E7;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 0 2px lighten($color: #bdbfc2, $amount: 20%);
+
+    &::placeholder {
+        color: #B8BEC8;
+    }
+}

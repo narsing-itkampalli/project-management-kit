@@ -1,0 +1,15 @@
+&__body {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+
+    &-container {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@import 'body/list-view';
+@import 'body/board-view';
+@import 'body/chat-view';

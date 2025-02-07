@@ -1,0 +1,26 @@
+&-user-current-status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: -1px;
+    right: -3px;
+    border: 1px solid white;
+    
+    &-toggle-icon {
+        font-size: 8px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        display: flex;
+    }
+
+    &:hover &-toggle-icon {
+        opacity: 1;
+    }
+}

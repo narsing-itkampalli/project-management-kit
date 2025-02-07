@@ -1,0 +1,118 @@
+&__menu {
+    position: absolute;
+    top: calc((shared('topbar', 'height') - $input-height--active) / 2 + $input-height--active);
+    left: 0;
+    right: 0;
+    border: 1px solid $input-border-color--active;
+    border-top: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075);
+    border-radius: 0 0 12px 12px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0 0 12px 12px;
+    }
+
+    &-body {
+        flex: 1;
+        min-height: 150px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        max-height: 500px;
+        overflow: auto;
+    }
+
+    @import 'menu/filter-section';
+    @import 'menu/result-section';
+
+    &-footer {
+        flex: none;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        align-items: center;
+        border-top: 1px solid asset('color', 'border');
+        padding-left: 8px;
+        padding-right: 16px;
+
+        &-action-list {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &-action {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-icon {
+                display: flex;
+                font-size: 15px;
+            }
+
+            &:hover {
+                background-color: asset('color', 'hover-dark');
+            }
+        }
+    }
+
+    &-shortcut-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    &-shortcut {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &-title {
+            font-size: to-rem(11);
+            font-family: asset('font', 'heading');
+            color: #707070;
+        }
+
+        &-key-group {
+            display: flex;
+            align-items: center;
+            background-color: #e7e7e7;
+            padding: 0px 6px;
+            border-radius: 3px;
+            gap: 4px;
+            height: 20px;
+            min-width: 24px;
+            justify-content: center;
+            color: #6f6f6f;
+        }
+
+        &-key {
+            display: flex;
+            user-select: none;
+
+            &-icon {
+                display: flex;
+                font-size: 10px;
+            }
+
+            &-text {
+                font-family: asset('font', 'heading');
+                font-size: to-rem(10);
+            }
+        }
+
+        &-key-group[has-multiple-icon]:not([has-multiple-icon=false]) &-key-icon {
+            font-size: 8px;
+        }
+    }
+
+}

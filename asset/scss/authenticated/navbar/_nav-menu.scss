@@ -1,0 +1,198 @@
+$nav-item-title-color: #5C5C5C;
+
+.nav-menu {
+
+    &-section {
+        padding-left: $sidebar-padding;
+        padding-right: $sidebar-padding;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 8px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    + .nav-menu {
+        margin-top: 12px;
+    }
+
+    &__title {
+        font-family: asset('font', 'heading');
+        color: #919191;
+        height: 20px;
+        margin-bottom: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+
+        &:empty {
+            display: none;
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        &-menu-toggle-icon {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 10px;
+            display: flex;
+            cursor: pointer;
+            color: #919191;
+            margin-left: -4px;
+            // opacity: 0;
+            // visibility: hidden;
+            transition: opacity 0.2s ease-in, transform 0.15s ease-in;
+        }
+
+        &:hover &-menu-toggle-icon {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &-text {
+            font-size: to-rem(14);
+        }
+
+        &-badge {
+            font-size: 12px;
+            background-color: #e8ecff;
+            color: asset('color', 'theme');
+            width: 24px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        &-right {
+            display: flex;
+        }
+    }
+
+    &:not([is-active=true]) &__title-menu-toggle-icon {
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(-90deg);
+    }
+
+    &__items {
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    &[is-active=true] &__items {
+        height: max-content;
+    }
+
+    &__item {
+        height: 34px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        color: $nav-item-title-color;
+        font-weight: 400;
+        font-size: 14px;
+        font-size: to-rem(14);
+        gap: 12px;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            background-color: asset('color', 'hover-dark');
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &-icon {
+            color: #7C7C7C;
+            font-size: 18px;
+            display: flex;
+        }
+
+        &-submenu-toggle-status-icon {
+            font-size: 12px;
+            display: flex;
+            color: #7C7C7C;
+            transition: transform 0.15s ease-in-out;
+
+            &--compact {
+                display: none;
+            }
+        }
+
+        &[is-active=true] &-submenu-toggle-status-icon {
+            transform: rotate(180deg);
+        }
+
+        &-badge {
+            font-size: 12px;
+            // background-color: #ebebeb;
+            background-color: #dce4ff;
+            color: #5C5C5C;
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.nav-submenu {
+    height: 0px;
+    overflow: hidden;
+
+    &__container {
+        padding-left: 30px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        // padding-bottom: 10px;
+    }
+
+    &__item {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -10px;
+            width: 2px;
+            height: 100%;
+            background-color: #d5d5d5;
+        }
+
+        &:hover {
+            background-color: asset('color', 'hover-dark');
+        }
+
+        &-title {
+            font-size: 14px;
+            color: $nav-item-title-color;
+        }
+    }
+}
+
+.nav-menu__item[is-active=true] + .nav-submenu {
+    height: max-content;
+}

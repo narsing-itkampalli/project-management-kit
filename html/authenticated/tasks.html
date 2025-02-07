@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/navbar.css">
+    <link rel="stylesheet" href="/asset/css/tasks.css">
+</head>
+<body>
+    <header>
+        <include path="navbar"></include>
+    </header>
+    <main>
+        <section class="tasks">
+            <div class="tasks__container">
+                <include path="tasks/header"></include>
+                <div class="tasks__body">
+                    <div class="tasks__body-container">
+                        <route id="task_view_type__list" name="List View" get="type?=list">
+                            <include path="tasks/body/list-view"></include>
+                        </route>
+                        <route id="task_view_type__board" name="Board View" get="type=board">
+                            <include path="tasks/body/board-view"></include>
+                        </route>
+                        <route id="task_view_type__chat" name="Chat View" get="type=chat">
+                            <include path="tasks/body/chat-view"></include>
+                        </route>
+                    </div>
+                </div>
+                <div class="tasks__footer">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="/asset/js/index.js"></script>
+</body>
+
+<route name="View Task" get="view-task" id="view-task">
+    <include path="tasks/view-task"></include>
+</route>
+
+
+<route name="Filter menu" get="filter-menu" id="filter-menu">
+    <include path="tasks/header/filter-menu"></include>
+</route>
+<route name="Sort menu" get="sort-menu" id="sort-menu">
+    <include path="tasks/header/sort-menu"></include>
+</route>
+<route-group name="Task Context Menu" get-keys="context-menu">
+    <route name="Task" get-values="task" id="context-menu--task">
+        <include path="tasks/context-menu/task"></include>
+    </route>
+    <route name="Section" get-values="section" id="context-menu--section">
+        <include path="tasks/context-menu/section"></include>
+    </route>
+    <route name="Priority" get-values="priority" id="context-menu--priority">
+        <include path="tasks/context-menu/task-priority"></include>
+    </route>
+    <route name="Project Status" get-values="project-status" id="context-menu--project-status">
+        <include path="tasks/context-menu/project-status"></include>
+    </route>
+    <route name="Project" get-values="project" id="context-menu--project">
+        <include path="tasks/context-menu/project"></include>
+    </route>
+    <route name="Add Button" get-values="addition" id="context-menu--addition">
+        <include path="tasks/context-menu/addition"></include>
+    </route>
+</route-group>
+</html>

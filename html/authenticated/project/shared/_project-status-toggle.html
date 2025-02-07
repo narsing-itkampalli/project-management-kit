@@ -1,0 +1,24 @@
+<child-component default>
+    <button type="button" class="project-status-toggle" push="?project-status-menu">
+        <div class="project-status-toggle__content">
+            <span class="project-status-toggle__content-color-circle project-status-toggle__content-color-circle--with-icon" style="background-color: rgb(219 253 219); border-color: rgb(0 193 0); color: rgb(0 193 0);">
+                <icon name="grommet-icons-checkmark"></icon>
+            </span>
+            <span class="project-status-toggle__content-label">Completed</span>
+        </div>
+        <div class="project-status-toggle__indicator">
+            <icon name="gridicons-chevron-down"></icon>
+        </div>
+    </button>
+</child-component>
+
+<child-component id="no-toggle-icon">
+    <button type="button" class="project-status-toggle project-status-toggle--no-indicator">
+        <div class="project-status-toggle__content">
+            <span class="project-status-toggle__content-color-circle project-status-toggle__content-color-circle--with-icon" style="background: #e4f3ff; color: #2a82c9; border-color: #2a82c9;">
+                <icon name="carbon--in-progress"></icon>
+            </span>
+            <span class="project-status-toggle__content-label">In progress</span>
+        </div>
+    </button>
+</child-component>

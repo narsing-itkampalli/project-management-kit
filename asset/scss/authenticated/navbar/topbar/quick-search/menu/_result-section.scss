@@ -1,0 +1,13 @@
+// &-result-section {
+
+// }
+
+&-result {
+    &-section {
+        padding-top: 16px;
+    }
+
+    @import './result-section/group';
+    @import './result-section/item';
+    @import './result-section/exception';
+}

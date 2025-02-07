@@ -1,0 +1,37 @@
+<div class="user-context">
+    <div class="user-context__container">
+        <div class="user-context__header">
+            <include path="user-context/active-account"></include>
+            <include path="user-context/header-option-list"></include>
+        </div>
+        <div class="user-context__body-and-footer-group">
+            <div class="user-context__body-and-footer-group-container">
+                <route get="!workspace-menu&!option-submenu&!switch-account-menu" duplicate>
+                    <div class="user-context__body">
+                        <div class="user-context__active-workspace-section">
+                            <div class="user-context__active-workspace-section-title" is-disabled="false">Workspace</div>
+                            <include path="user-context/active-workspace"></include>
+                        </div>
+                        <div class="user-context__option-list-section">
+                            <include path="user-context/option-list"></include>
+                        </div>
+                    </div>
+                    <div class="user-context__footer">
+                        <div class="user-context__option-list-section">
+                            <include path="user-context/option-list--footer"></include>
+                        </div>
+                    </div>
+                </route>
+                <route id="workspace-menu" get="workspace-menu" name="Workspace Selector">
+                    <include path="user-context/workspace-menu"></include>
+                </route>
+                <route id="option-submenu" get="option-submenu" name="Option Submenu">
+                    <include path="user-context/option-submenu"></include>
+                </route>
+                <route id="switch-account-menu" get="switch-account-menu" name="Switch Account menu">
+                    <include path="user-context/switch-account-menu"></include>
+                </route>
+            </div>
+        </div>
+    </div>
+</div>

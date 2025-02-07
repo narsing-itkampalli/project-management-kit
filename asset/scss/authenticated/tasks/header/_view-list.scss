@@ -1,0 +1,98 @@
+&-view-list {
+    display: flex;
+    padding-left: 12px;
+    position: relative;
+    gap: 4px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+        background-color: #D9D9D9;
+        height: 22px;
+        width: 1px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: to-rem(14);
+        transition: color 0.15s ease-in-out;
+        position: relative;
+        height: $item-size;
+        // font-weight: 500;
+
+        &-link {
+            color: asset('color', 'text');
+        }
+
+        &:not([is-active]), &[is-active=false] {
+            cursor: pointer;
+
+            &:hover {
+                color: asset('color', 'theme');
+                // background-color: asset('color', 'hover');
+            }
+        }
+
+        &[is-active]:not([is-active=false]) {
+            transition: none;
+            color: asset('color', 'theme');
+            cursor: default;
+            // padding-right: 0;
+            padding-right: 4px;
+            border: 1px solid asset('color', 'theme');
+            border-radius: 35px;
+            background-color: #ebefff;
+            // background-color: #e9ecfb;
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     bottom: -2px;
+            //     left: 0;
+            //     right: 0px;
+            //     height: 2px;
+            //     background-color: asset('color', 'theme');
+            // }
+
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        &-icon {
+            display: flex;
+            
+        }
+
+        &-option-toggle {
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+            color: #646464;
+
+            &:hover {
+                background-color: asset('color', 'hover-dark');
+                color: asset('color', 'text');
+            }
+        }
+
+        &:not([is-active]) &-option-toggle, &[is-active=false] &-option-toggle {
+            display: none;
+        }
+    }
+}

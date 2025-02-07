@@ -1,0 +1,53 @@
+&-timetracker {
+    // display: flex;
+
+    // &-icon {
+    //     width: 30px;
+    //     height: 30px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     border-radius: 50%;
+    //     background-color: rgb(255, 195, 245);
+    //     font-size: 16px;
+    // }
+
+    // &-label {
+    //     font-size: 10px;
+    //     font-weight: 500;
+    //     font-family: asset('font', 'heading');
+    // }
+
+    // &-content {
+    //     &-body {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    gap: 10px;
+    cursor: pointer;
+    // border: 1px solid asset('color', 'theme');
+    border: none;
+    background-color: #bac5fd71;
+    color: asset('color', 'theme');
+    // background-color: asset('color', 'theme');
+    // color: white;
+    
+    &-icon {
+        display: flex;
+        font-size: 18px;
+    }
+
+    &-text {
+        font-size: to-rem(14);
+    }
+
+}

@@ -1,0 +1,39 @@
+&-option-list {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    visibility: hidden;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid #e2e2e2;
+    
+        &--no-border {
+            border: none;
+        }
+    
+        &-icon {
+            display: flex;
+            font-size: 15px;
+        }
+    
+        &:hover {
+            background-color: asset('color', 'hover');
+            color: asset('color', 'theme');
+            border-color: transparentize($color: asset('color', 'theme'), $amount: 0.6);
+        }
+    }
+}
+
+&:hover &-option-list {
+    visibility: visible;
+}

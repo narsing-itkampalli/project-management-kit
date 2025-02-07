@@ -1,0 +1,32 @@
+@import '../../global/asset';
+@import '../../global/functions';
+@import '../../global/shared';
+
+.task-manager {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - shared('topbar', 'height'));
+    }
+
+    // Elements
+    @import './task-manager/header';
+    @import './task-manager/body';
+}
+
+// Shared
+@import '../project/shared/project-select-menu';
+@import '../project/shared/project-select-menu/project-status';
+
+@import '../project/shared/create-project-status-update';
+@import '../project/shared/manage-project-status-update';
+@import '../project/shared/project-status-toggle';
+
+// Blocks
+@import 'task-manager/task-list-view';
+@import 'task-manager/task-board-view';
+@import 'task-manager/task-detail-view';
+@import 'task-manager/task-calendar-view';
+@import 'task-manager/task-timeline-view';
+@import 'task-manager/task-gantt-view';

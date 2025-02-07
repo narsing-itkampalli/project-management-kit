@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random String</title>
+</head>
+<body>
+    <button type="button" onclick="generateAndCopy()">Generate & Copy</button>
+    <div id="generatedText"></div>
+
+    <script>
+        function generateAndCopy() {
+            navigator.clipboard.writeText(Generate());
+        }
+
+        function range(start, end) {
+            if (typeof start === 'number' && typeof end === 'number') {
+                return Array.from({ length: end - start + 1 }, (_, i) => i + start);
+            } else if (typeof start === 'string' && typeof end === 'string') {
+                return String.fromCharCode(
+                    ...range(start.charCodeAt(0), end.charCodeAt(0))
+                ).split('');
+            }
+            return [];
+        }
+
+        const numbers = range('0', '9');
+        const upperAlpha = range('A', 'Z');
+        const lowerAlpha = range('a', 'z');
+        const alpha = [...upperAlpha, ...lowerAlpha];
+        const combined = [...numbers, ...alpha];
+
+        function Generate(length = 6) {
+            let randomString = '';
+
+            for(let i = 0; i < length; i++) {
+                if(i === 0) randomString+= alpha[Math.floor((Math.random() * alpha.length))];
+                else randomString+= combined[Math.floor((Math.random() * combined.length))];
+            }
+
+            generatedText.innerText = randomString;
+            return randomString;
+        }
+    </script>
+</body>
+</html>

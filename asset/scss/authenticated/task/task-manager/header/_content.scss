@@ -1,0 +1,42 @@
+&-content {
+    flex: 1;
+    // border-left: 1px solid asset('color', 'border');
+
+    &-row {
+        padding-left: 8px;
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        &-column {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+
+    &-row:not(:last-child) {
+        padding-bottom: 6px;
+    }
+
+    &-row + &-row {
+        padding-top: 6px;
+        // border-top: 1px solid asset('color', 'border');
+    }
+}
+
+@import './content/title';
+@import './content/star';
+// @import './content/status';
+@import './content/member';
+@import './content/main-context';
+
+@import './content/addition';
+@import './content/view-list';
+@import './content/option-list';
+@import './content/filter-menu';
+@import './content/sort-menu';
+@import './content/search-menu';

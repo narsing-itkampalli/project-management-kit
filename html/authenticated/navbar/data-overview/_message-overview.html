@@ -1,0 +1,24 @@
+<div class="message-overview">
+    <div class="message-overview__list">
+        <repeat value="7">
+            <div class="message-overview__item" is-user-online="$random(true|false)">
+                <div class="message-overview__item-user">
+                    <div class="message-overview__item-user-image">
+                        <img src="/asset/temp/profile/$random(1|2|3|4|5|6|7|8|9).jpg" alt="...">
+                    </div>
+                    <div class="message-overview__item-user-status"></div>
+                </div>
+                <div class="message-overview__item-info">
+                    <div class="message-overview__item-info-row">
+                        <span class="message-overview__item-info-username" single-line-text>Kerry Gamez</span>
+                        <span class="message-overview__item-info-time">09:42 AM</span>
+                    </div>
+                    <div class="message-overview__item-info-row">
+                        <span class="message-overview__item-info-brief-message" single-line-text>Have you checked the design?</span>
+                        <span class="message-overview__item-info-new-message-status">9+</span>
+                    </div>
+                </div>
+            </div>
+        </repeat>
+    </div>
+</div>

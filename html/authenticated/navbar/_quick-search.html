@@ -1,0 +1,25 @@
+<div class="quick-search" set-attribute-if-url-has="quick-search=>is-active">
+    <div class="quick-search__container">
+        <form action="/quick-search" method="get" class="quick-search__form">
+            <div class="quick-search__input-field" set-attribute-if-url-has="!quick-search=>push::?quick-search&&quick-search&!search-type=>push::?search-type=searched&&quick-search&search-type=default=>push::?search-type=searched&&quick-search&search-type=searched=>push::?search-type=exception&&quick-search&search-type=exception=>push::?search-type=default">
+                <div class="quick-search__input-wrapper">
+                    <div class="quick-search__input-icon">
+                        <icon name="carbon--search"></icon>
+                    </div>
+                    <input type="text" class="quick-search__input" placeholder="Search for tasks, projects, files...">
+                    <div class="quick-search__input-shortcut">
+                        <span class="quick-search__input-shortcut-icon">
+                            <icon name="material-symbols--keyboard-command-key"></icon>
+                        </span>
+                        <span class="quick-search__input-shortcut-text">K</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <route-group name="Quick-Search" get="quick-search" icon="bx-search-alt">
+            <route name="Quick Search">
+                <include path="quick-search/menu"></include>
+            </route>
+        </route-group>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+&-star-button {
+    width: $item-size;
+    height: $item-size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+
+    &-icon {
+        display: flex;
+    }
+
+    &:hover {
+        background-color: asset('color', 'hover');
+        // color: transparentize($color: #ff8220, $amount: 0.3);
+        // color: #ff8220;
+    }
+
+    &[is-active]:not([is-active=false]) {
+        color: asset('color', 'starred');
+    }
+}

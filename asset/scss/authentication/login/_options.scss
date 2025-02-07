@@ -1,0 +1,20 @@
+&__options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    color: #515559;
+}
+
+&__checkbox-field {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+&__checkbox-label {
+    user-select: none;
+}
+
+&__forgot-password-link {
+    color: asset('color', 'theme');
+}

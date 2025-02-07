@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/library.css">
+</head>
+<body>
+    <div class="shared-library">
+        <div class="video-player">
+            <div class="video-player__video">
+                <img src="/asset/temp/image/lorem-ipsum/2.jpg" alt="...">
+            </div>
+            <div class="video-player__header">
+                <div class="video-player__header-left">
+                    <div class="video-player__video-info">
+                        <div class="video-player__video-info-owner">
+                            <div class="video-player__video-info-owner-icon">
+                                <img src="/asset/temp/profile/1.jpg" alt="...">
+                            </div>
+                            <div class="video-player__video-info-owner-name">Kerry Gamez</div>
+                        </div>
+                        <div class="video-player__video-info-title">Random Video Title - Yes, It is.</div>
+                    </div>
+                </div>
+                <div class="video-player__header-right">
+                    <div class="video-player__header-action-list">
+                        <button type="button" class="video-player__header-action video-player__header-action--comment">
+                            <span class="video-player__header-action-icon">
+                                <icon name="pajamas-comment-dots"></icon>
+                            </span>
+                            <span class="video-player__header-action-badge">6</span>
+                        </button>
+                        <button type="button" class="video-player__header-action video-player__header-action--share">
+                            <span class="video-player__header-action-icon">
+                                <icon name="mdi-share"></icon>
+                            </span>
+                        </button>
+                        <!-- <button type="button" class="video-player__header-action video-player__header-action--more-option">
+                            <span class="video-player__header-action-icon">
+                                <icon name="mdi-dots-vertical"></icon>
+                            </span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="video-player__footer">
+                <div class="video-player__progress">
+                    <!-- <div class="video-player__progress-time">
+                        <div class="video-player__progress-time-text video-player__progress-time-text--current">00:15</div>
+                        <div class="video-player__progress-time-text video-player__progress-time-text--total">05:08</div>
+                    </div> -->
+                    <div class="video-player__progress-bar">
+                        <div class="video-player__progress-bar-holder">
+                            <div class="video-player__progress-bar-buffered"></div>
+                            <div class="video-player__progress-bar-hovered"></div>
+                            <div class="video-player__progress-bar-watched"></div>
+                            <div class="video-player__progress-bar-timestamp video-player__progress-bar-timestamp--1"></div>
+                            <div class="video-player__progress-bar-timestamp video-player__progress-bar-timestamp--2"></div>
+                        </div>
+                        <div class="video-player__progress-bar-playhead-dot">
+                            <div class="video-player__progress-bar-playhead-dot-container"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-player__control">
+                    <div class="video-player__control-left">
+                        <button type="button" class="video-player__control-button video-player__control-button--volume">
+                            <span class="video-player__control-button-icon">
+                                <icon name="mdi--volume-high"></icon>
+                            </span>
+                            <div class="video-player__control-volume-bar">
+                                <div class="video-player__control-volume-bar-fill"></div>
+                                <div class="video-player__control-volume-bar-dot"></div>
+                            </div>
+                        </button>
+                        <div class="video-player__video-time">
+                            <span class="video-player__video-time-text video-player__video-time-text--current">00:15</span>
+                            <span class="video-player__video-time-split">/</span>
+                            <span class="video-player__video-time-text video-player__video-time-text--total">05:08</span>
+                        </div>
+                    </div>
+                    <div class="video-player__control-center">
+                        <button type="button" class="video-player__control-button video-player__control-button--previous">
+                            <span class="video-player__control-button-icon">
+                                <icon name="mdi--skip-previous"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--skip-backward">
+                            <span class="video-player__control-button-icon">
+                                <icon name="ic--sharp-replay-10"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--playpause">
+                            <span class="video-player__control-button-icon">
+                                <icon name="mdi--pause"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--skip-forward">
+                            <span class="video-player__control-button-icon">
+                                <icon name="ic--sharp-forward-10"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--next">
+                            <span class="video-player__control-button-icon">
+                                <icon name="mdi--skip-next"></icon>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="video-player__control-right">
+                        <button type="button" class="video-player__control-button video-player__control-button--subtitle">
+                            <span class="video-player__control-button-icon">
+                                <icon name="mdi--subtitles"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--settings">
+                            <span class="video-player__control-button-icon">
+                                <icon name="material-symbols--settings"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--pip">
+                            <span class="video-player__control-button-icon">
+                                <icon name="material-symbols--pip"></icon>
+                            </span>
+                        </button>
+                        <button type="button" class="video-player__control-button video-player__control-button--fullscreen">
+                            <span class="video-player__control-button-icon">
+                                <icon name="ri--fullscreen-line"></icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/asset/js/index.js" type="module"></script>
+</body>
+</html>

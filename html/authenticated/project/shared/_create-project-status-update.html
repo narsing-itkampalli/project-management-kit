@@ -1,0 +1,168 @@
+<div class="create-project-status-update" >
+    <div class="create-project-status-update__container">
+        <div class="create-project-status-update__header">
+            <div class="create-project-status-update__header-left">
+                <h2 class="create-project-status-update__heading">
+                    Change status
+                </h2>
+            </div>
+            <div class="create-project-status-update__header-right">
+                <div class="create-project-status-update__header-action-list">
+                    <button type="button" class="create-project-status-update__header-action-list-item" push="?create-project-status-update--history-panel">
+                        <span class="create-project-status-update__header-action-list-item-icon">
+                            <icon name="mdi-history"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="create-project-status-update__header-action-list-item">
+                        <span class="create-project-status-update__header-action-list-item-icon">
+                            <icon name="mdi--arrow-expand"></icon>
+                        </span>
+                    </button>
+                    <button type="button" class="create-project-status-update__header-action-list-item" push="?create-project-status-update">
+                        <span class="create-project-status-update__header-action-list-item-icon">
+                            <icon name="mdi-close"></icon>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="create-project-status-update__body">
+            <div class="create-project-status-update__body-content">
+                <!-- <div class="create-project-status-update__status">
+                    <div class="create-project-status-update__status-from">
+                        <include path="project-status-toggle" pick="no-toggle-icon"></include>
+                    </div>
+                    <div class="create-project-status-update__status-split-icon">
+                        <icon name="mdi--arrow-right-thin"></icon>
+                    </div>
+                    <div class="create-project-status-update__status-to">
+                        <include path="project-status-toggle"></include>
+                    </div>
+                </div> -->
+
+
+                <div style="display:block">
+                    <div class="create-project-status-update__title-section">
+                        <div class="create-project-status-update__title">
+                            <div class="create-project-status-update__title-text">Status update - 20 Mar</div>
+                            <textarea class="create-project-status-update__title-input" oninput="document.querySelector('.create-project-status-update__title-text').innerText = this.value" placeholder="Status update - 20 Mar"></textarea>
+                        </div>
+                    </div>
+                    <div class="create-project-status-update__info">
+                        <div class="create-project-status-update__info-item">
+                            <div class="create-project-status-update__info-item-label">Status</div>
+                            <div class="create-project-status-update__info-item-content">
+                                <div class="create-project-status-update__status">
+                                    <div class="create-project-status-update__status-from">
+                                        <include path="project-status-toggle" pick="no-toggle-icon"></include>
+                                    </div>
+                                    <div class="create-project-status-update__status-split-icon">
+                                        <icon name="mdi--arrow-right-thin"></icon>
+                                    </div>
+                                    <div class="create-project-status-update__status-to">
+                                        <include path="project-status-toggle"></include>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="create-project-status-update__info-item">
+                            <div class="create-project-status-update__info-item-label">Project Owner</div>
+                            <div class="create-project-status-update__info-item-content">
+                                <div class="create-project-status-update__info-item-project-owner">
+                                    <div class="create-project-status-update__info-item-project-owner-icon">
+                                        <img src="/asset/temp/profile/1.jpg" alt="...">
+                                    </div>
+                                    <div class="create-project-status-update__info-item-project-owner-name">Kerry Gamez</div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="create-project-status-update__attachment">
+                        <button type="button" class="create-project-status-update__attachment-button">
+                            <span class="create-project-status-update__attachment-button-icon">
+                                <icon name="mdi--paperclip-plus"></icon>
+                            </span>
+                            <span class="create-project-status-update__attachment-button-label">Add attachment</span>
+                        </button>
+                    </div>
+                    <div class="create-project-status-update__summary">
+                        <div class="create-project-status-update__summary-editor">
+                            <h2>Summary</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- 
+                    Planning done at 2:45 AM
+                    Complete the work in 30 minutes
+                        - Taking 2 minutes Eye rest break (2:46 AM)
+                        - Went to bathroom (2:48 AM - 3:50 AM)
+                        - Had a walk for 5 minutes
+                        - Started work again (3:58 AM)
+                        - Taking 2 minutes Eye rest break (4:15 AM)
+                        - Due time (4:30 AM) - still not completed
+                        - Taking 2 minutes Eye rest break (4:45 AM)
+                        - Taking 2 minutes Eye rest break (5:15 AM)
+                 -->
+                <!--
+                    Status
+                    Owner
+                    Attachment
+                    
+                 -->
+            </div>
+            <div class="create-project-status-update__body-sidebar" set-attribute-if-url-has="create-project-status-update--history-panel=>is-active::true">
+                <div class="create-project-status-update__history">
+                    <div class="create-project-status-update__history-container">
+                        <repeat value="4">
+                            <div class="create-project-status-update__history-item">
+                                <div class="create-project-status-update__history-item-gutter">
+                                    <div class="create-project-status-update__history-item-circle" style="background-color: rgb(219 253 219); border-color: rgb(0 193 0); color: rgb(0 193 0);">
+                                        <span class="create-project-status-update__history-item-circle-icon">
+                                            <icon name="grommet-icons-checkmark"></icon>
+                                        </span>
+                                    </div>
+                                    <div class="create-project-status-update__history-item-gutter-line"></div>
+                                </div>
+                                <div class="create-project-status-update__history-item-info">
+                                    <div class="create-project-status-update__history-item-info--primary">
+                                        <div class="create-project-status-update__history-item-info-title" single-line-text>Status update - 23 Mar</div>
+                                    </div>
+                                    <div class="create-project-status-update__history-item-info--secondary">
+                                        <div class="create-project-status-update__history-item-info-owner">
+                                            <div class="create-project-status-update__history-item-info-owner-icon">
+                                                <img src="/asset/temp/profile/1.jpg" alt="...">
+                                            </div>
+                                            <div class="create-project-status-update__history-item-info-owner-name">Kerry Gamez</div>
+                                        </div>
+                                        <div class="create-project-status-update__history-item-info-time">3 days ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </repeat>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-project-status-update__footer">
+            <div class="create-project-status-update__footer-left">
+                <div class="create-project-status-update__notification">
+                    <button type="button" class="create-project-status-update__notification-setting">
+                        <icon name="mdi--notification-settings-outline"></icon>
+                    </button>
+                    <div class="create-project-status-update__notification-content">
+                        <div class="create-project-status-update__notification-count"><span class="create-project-status-update__notification-count-number">0</span> people will be notified</div>
+                        <!-- <button type="button" class="create-project-status-update__notification-add-recipient">
+                            <span class="create-project-status-update__notification-add-recipient-icon">
+                                <icon name="bx--plus"></icon>
+                            </span>
+                            <span class="create-project-status-update__notification-add-recipient-text">Add recipients</span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="create-project-status-update__footer-right">
+                <button type="button" class="create-project-status-update__submit">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

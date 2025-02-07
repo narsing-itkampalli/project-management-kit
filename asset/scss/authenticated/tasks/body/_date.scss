@@ -1,0 +1,42 @@
+&-date {
+    font-size: to-rem(12);
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    gap: 4px;
+    padding: 4px 6px;
+    border-radius: 35px;
+    margin-left: -6px;
+
+    &:hover {
+        background-color: asset('color', 'hover');
+    }
+
+    &-label {
+        font-size: to-rem(10);
+    }
+
+    
+    &-icon {
+        color: #7e7e7e;
+        display: flex;
+        font-size: 12px;
+        // font-size: 10px;
+        // width: 20px;
+        // height: 20px;
+        // border-radius: 50%;
+        // border: 1px dashed #7e7e7e;
+        // align-items: center;
+        // justify-content: center;
+    }
+
+    &-text {
+        display: flex;
+        gap: 6px;
+        color: #7e7e7e;
+
+        &>* {
+            display: flex;
+        }
+    }
+}

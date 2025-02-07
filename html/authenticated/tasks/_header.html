@@ -1,0 +1,211 @@
+<div class="tasks__header">
+    <div class="tasks__header-container">
+        <div class="tasks__header-icon-section">
+            <a href="#">
+                <div class="tasks__header-icon">
+                    <div class="tasks__header-icon-container">
+                        <img src="/asset/temp/project/admin-panel.png" alt="...">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="tasks__header-content">
+            <div class="tasks__header-content-row">
+                <div class="tasks__header-content-row-container">
+                    <div class="tasks__header-content-row-column tasks__header-content-row-column--left">
+                        <a href="#" class="tasks__header-title-link">
+                            <div class="tasks__header-title">CoderAxis Admin Panel</div>
+                        </a>
+                        <button type="button" class="tasks__header-star-button" push="?project-starred" set-attribute-if-url-has="project-starred=>is-active::true">
+                            <span class="tasks__header-star-button-icon">
+                                <route get="!project-starred" duplicate>
+                                    <icon name="star"></icon>
+                                </route>
+                                <route get="project-starred" duplicate>
+                                    <icon name="starred"></icon>
+                                </route>
+                            </span>
+                        </button>
+                        <button type="button" class="tasks__header-status-toggle" push="$context-menu--project-status">
+                            <div class="tasks__header-status-toggle-content">
+                                <span class="tasks__header-status-toggle-content-color-circle tasks__header-status-toggle-content-color-circle--with-icon" style="background-color: rgb(219 253 219); border-color: rgb(0 193 0); color: rgb(0 193 0);">
+                                    <icon name="grommet-icons-checkmark"></icon>
+                                </span>
+                                <span class="tasks__header-status-toggle-content-label">Completed</span>
+                            </div>
+                            <div class="tasks__header-status-toggle-indicator">
+                                <icon name="gridicons-chevron-down"></icon>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="tasks__header-content-row-column tasks__header-content-row-column--right">
+                        <div class="tasks__header-member-section">
+                            <div class="tasks__header-member-list">
+                                <div class="tasks__header-member-list-item">
+                                    <img src="/asset/temp/profile/1.jpg" alt="...">
+                                </div>
+                                <div class="tasks__header-member-list-item">
+                                    <img src="/asset/temp/profile/2.jpg" alt="...">
+                                </div>
+                                <div class="tasks__header-member-list-item">
+                                    <img src="/asset/temp/profile/3.jpg" alt="...">
+                                </div>
+                                <div class="tasks__header-member-list-item">
+                                    <img src="/asset/temp/profile/4.jpg" alt="...">
+                                </div>
+                                <div class="tasks__header-member-list-item tasks__header-member-list-item--more">
+                                    +8
+                                </div>
+                            </div>
+                            <div class="tasks__header-member-add">
+                                <button type="button" class="tasks__header-member-add-button">
+                                    <span class="tasks__header-member-add-button-icon">
+                                        <icon name="mdi-users-outline"></icon>
+                                    </span>
+                                    <span class="tasks__header-member-add-button-label">Join</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tasks__header-option-context-toggle" push="$context-menu--project">
+                            <icon name="mdi-dots-vertical"></icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks__header-content-row">
+                <div class="tasks__header-content-row-container">
+                    <div class="tasks__header-content-row-column tasks__header-content-row-column--left">
+                        <button type="button" class="tasks__header-add">
+                            <div class="tasks__header-add-quick">
+                                <span class="tasks__header-add-quick-icon">
+                                    <icon name="bx--plus"></icon>
+                                </span>
+                                <span class="tasks__header-add-quick-label">Add task</span>
+                            </div>
+                            <div class="tasks__header-add-option-toggle" push="$context-menu--addition">
+                                <span class="tasks__header-add-option-toggle-icon">
+                                    <icon name="gridicons-chevron-down"></icon>
+                                </span>
+                            </div>
+                        </button>
+                        <div class="tasks__header-view-list">
+                            <!-- <a href="#" class="tasks__header-view-list-item-link">
+                                <div class="tasks__header-view-list-item">
+                                    <div class="tasks__header-view-list-item-content">
+                                        <span class="tasks__header-view-list-item-icon">
+                                            <icon name="material-symbols-light-grid-view-outline"></icon>
+                                        </span>
+                                        <span class="tasks__header-view-list-item-label">Overview</span>
+                                    </div>
+                                    <div class="tasks__header-view-list-item-option-toggle">
+                                        <icon name="mdi-dots-horizontal"></icon>
+                                    </div>
+                                </div>
+                            </a> -->
+                            <div class="tasks__header-view-list-item" push="$task_view_type__list" set-attribute-if-url-has="type?=list=>is-active::true">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="octicon--tasklist-24"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">List</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                            <div class="tasks__header-view-list-item" push="$task_view_type__board" set-attribute-if-url-has="type=board=>is-active::true">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="fluent-mdl2--taskboard"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">Board</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                            <div class="tasks__header-view-list-item" push="$task_view_type__chat" set-attribute-if-url-has="type=chat=>is-active::true">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="bx--sidebar"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">Detail</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                            <div class="tasks__header-view-list-item" set-attribute-if-url-has="type=calendar=>is-active::true">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="mdi--calendar-month-outline"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">Calendar</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                            <div class="tasks__header-view-list-item">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="oui--timeline"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">Timeline</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                            <div class="tasks__header-view-list-item">
+                                <div class="tasks__header-view-list-item-content">
+                                    <span class="tasks__header-view-list-item-icon">
+                                        <icon name="fluent--gantt-chart-24-regular"></icon>
+                                    </span>
+                                    <span class="tasks__header-view-list-item-label">Gantt</span>
+                                </div>
+                                <div class="tasks__header-view-list-item-option-toggle">
+                                    <icon name="mdi-dots-horizontal"></icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tasks__header-content-row-column tasks__header-content-row-column--right">
+                        <div class="tasks__header-option-list">
+                            <div class="tasks__header-option-list-item" push="$filter-menu">
+                                <div class="tasks__header-option-list-item-content">
+                                    <span class="tasks__header-option-list-item-icon">
+                                        <icon name="lucide-filter"></icon>
+                                    </span>
+                                    <span class="tasks__header-option-list-item-label">
+                                        Filter
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tasks__header-option-list-item" push="$sort-menu">
+                                <div class="tasks__header-option-list-item-content">
+                                    <span class="tasks__header-option-list-item-icon">
+                                        <icon name="mdi-sort"></icon>
+                                    </span>
+                                    <span class="tasks__header-option-list-item-label">
+                                        Sort
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tasks__header-option-list-item tasks__header-option-list-item--round" push="$search-tasks">
+                                <div class="tasks__header-option-list-item-content">
+                                    <span class="tasks__header-option-list-item-icon">
+                                        <icon name="carbon--search"></icon>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <route name="Search tasks" get="search-tasks" id="search-tasks">
+                        <include path="header/search-menu"></include>
+                    </route>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

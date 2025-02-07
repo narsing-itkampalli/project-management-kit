@@ -1,0 +1,39 @@
+{
+    "menu": [
+        {
+            "type": "nav-item",
+            "data": {
+                "icon": "tdesign-task",
+                "label": "My Tasks"
+            }
+        },
+        {
+            "type": "nav-item",
+            "data": {
+                "icon": "tdesign-task",
+                "label": "My Tasks"
+            }
+        },
+        {
+            "type": "nav-item",
+            "data": {
+                "icon": "tdesign-task",
+                "label": "My Tasks"
+            }
+        },
+        {
+            "type": "nav-item",
+            "data": {
+                "icon": "tdesign-task",
+                "label": "My Tasks"
+            }
+        },
+        {
+            "type": "nav-item",
+            "data": {
+                "icon": "tdesign-task",
+                "label": "Sales"
+            }
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+&-title-section {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+&-title {
+    position: relative;
+    
+    &-text, &-input {
+        font-size: to-rem(20);
+        font-family: asset('font', 'heading');
+        font-weight: 600;
+        color: asset('color', 'text');
+        // padding: 0 8px 0 4px;
+    }
+
+    &-text:hover {
+        color: asset('color', 'link');
+    }
+
+    // &[is-edit-mode]:not([is-edit-mode=false]) &-link {
+    //     visibility: hidden;
+    // }
+
+    // &-input {
+    //     // margin-left: -4px;
+    //     border: none;
+    //     outline: none;
+    //     min-width: 60px;
+    //     width: 100%;
+    //     position: absolute;
+    //     top: 0px;
+    //     left: 0;
+    //     bottom: 0px;
+    //     z-index: 2;
+
+    //     &-action-list {
+    //         display: flex;
+    //         gap: 4px;
+    //     }
+
+    //     &-action {
+    //         width: 22px;
+    //         height: 22px;
+    //         border: none;
+    //         outline: none;
+    //         background-color: transparent;
+    //         cursor: pointer;
+    //         border-radius: 4px;
+
+    //         &--submit {
+    //             background-color: asset('color', 'theme');
+    //             color: white;
+    //         }
+
+    //         &--cancel {
+    //             background-color: asset('color', 'delete');
+    //             color: white;
+    //         }
+
+    //         &-icon {
+    //             font-size: 12px;
+    //         }
+    //     }
+    // }
+
+    // &:not([is-edit-mode]:not([is-edit-mode=false])) &-input {
+    //     display: none;
+    // }
+
+    // &-edit {
+    //     width: 28px;
+    //     height: 28px;
+    //     border-radius: 50%;
+    //     border: none;
+    //     outline: none;
+    //     background-color: transparent;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     cursor: pointer;
+
+    //     // &:hover {
+    //     //     background-color: asset('color', 'hover-dark');
+    //     // }
+
+    //     &-icon {
+    //         font-size: 16px;
+    //         display: flex;
+    //         color: #5f5f5f;
+    //     }
+    // }
+
+}

@@ -1,0 +1,6 @@
+@function font_path($path:'') {
+    @return #{'/asset/font'+$path};
+}
+
+@import 'Lato';
+@import 'Poppins'
